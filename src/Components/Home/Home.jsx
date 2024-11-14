@@ -4,10 +4,10 @@ import Header from '../Utils/Header';
 import Divider from '../Utils/Divider';
 import Barrinha from '../../Assets/barrinha.svg?react';
 import CasaAmarelaEstatistica from '../../Assets/casa_amarela_estatistica.svg?react';
-import HospitalityRoom from '../../Assets/hospitality_room.svg?react';
+import HospitalityRoom from '../../Assets/hospitality_room.svg';
 import PalmTrees from '../../Assets/palm_trees.svg?react';
-import EventsImg from '../../Assets/events_img.svg?react';
-import LogoSea from '../../Assets/logo_sea.svg?react';
+import EventsImg from '../../Assets/events_img.svg';
+import LogoSea from '../../Assets/logo_sea.svg';
 import LogoLabelRed from '../../Assets/logo_label_red.svg?react';
 import LogoLabelGreen from '../../Assets/logo_label_green.svg?react';
 import LogoLabelOrange from '../../Assets/logo_label_orange.svg?react';
@@ -92,7 +92,7 @@ const Home = () => {
           />
         </div>
         <div className={styles.hospitalityRoom}>
-          <HospitalityRoom />
+          <img src={HospitalityRoom} />
         </div>
       </div>
       <div className={styles.houses}>
@@ -175,7 +175,7 @@ const Home = () => {
           <Button label="Ver eventos" type="green" />
         </div>
         <div className={styles.eventsImg}>
-          <EventsImg />
+          <img src={EventsImg} />
         </div>
         <div className={styles.eventsImgMobile}>
           <img src="src/Assets/events_img_mobile.png" alt="Eventos" />
@@ -183,7 +183,7 @@ const Home = () => {
       </div>
       <div className={styles.yellowFilme}>
         <div className={styles.yellowFilmeImg}>
-          <LogoSea />
+          <img src={LogoSea} />
         </div>
         <div className={styles.casaAmarelaInfo}>
           <div className={styles.hospitalityTitle}>

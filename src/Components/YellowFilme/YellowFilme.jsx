@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './YellowFilme.module.css';
 import Header from '../Utils/Header';
-import LogoSea from '../../Assets/logo_sea.svg?react';
+import LogoSea from '../../Assets/logo_sea.svg';
 import LogoOrange from '../../Assets/logo_label_orange.svg?react';
 import LogoOrangeAccent from '../../Assets/logo_label_orange_accent.svg?react';
 import PlusCircle from '../../Assets/plus_circle.svg?react';
@@ -72,7 +72,7 @@ const YellowFilme = () => {
           />
         </div>
         <div className={styles.yellowFilmeImg}>
-          <LogoSea />
+          <img src={LogoSea} />
         </div>
       </div>
       <div className={styles.yellowFilmeCamera}>

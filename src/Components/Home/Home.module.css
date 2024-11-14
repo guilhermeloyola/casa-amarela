@@ -182,7 +182,7 @@
   display: flex;
   gap: 3.5rem;
   padding: 3rem 6rem;
-  background: url('src/Assets/background_yellow_films.svg') no-repeat;
+  background: url('url(src/Assets/background_yellow_films.svg)') no-repeat;
   background-size: 100%;
   justify-content: center;
 }
