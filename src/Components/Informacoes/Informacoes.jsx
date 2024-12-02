@@ -30,40 +30,7 @@ const Informacoes = () => {
       <div className={styles.informacoes}>
         <div className={styles.header}>
           <Title label="Informações" type="yellow" />
-          <TextContent
-            content="Lorem ipsum dolor sit amet consectetur adipiscing elit hac habitant facilisi, sodales inceptos turpis mollis convallis risus ornare vehicula elementum eleifend, aliquet maecenas litora cubilia vitae interdum habitasse posuere ex. Rutrum torquent ullamcorper taciti cubilia neque enim, nostra risus erat suscipit tempor, donec maecenas morbi cursus sagittis. "
-            type="black"
-          />
-          <div className={styles.headerBusca}>
-            <Input placeholder="Busque sua dúvida aqui" />
-            <Button type="yellow" label="Buscar" icon={Lupa}></Button>
-          </div>
           <div className={styles.separator}></div>
-          <div className={styles.duvidas}>
-            <div>
-              <Label
-                label="Casa Amarela"
-                type="yellowBrown"
-                border="squareRound"
-                icon={LogoBrown}
-              />
-            </div>
-            <div>Título</div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit hac
-              habitant facilisi, sodales inceptos turpis mollis convallis risus
-              ornare vehicula elementum eleifend, aliquet maecenas litora
-              cubilia vitae interdum habitasse posuere ex. Rutrum torquent
-              ullamcorper taciti cubilia neque enim, nostra risus erat suscipit
-              tempor, donec maecenas morbi cursus sagittis.
-            </div>
-            <ol className={styles.duvidasList}>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-            </ol>
-          </div>
           <div className={styles.duvidas}>
             <div>
               <Label
@@ -77,11 +44,6 @@ const Informacoes = () => {
               <ExplamationPoint />
               Calendário das hospedagens
             </div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit hac
-              habitant facilisi, sodales inceptos turpis mollis convallis risus
-              ornare:
-            </div>
             <ol className={styles.duvidasList}>
               <li>Janeiro: Fechado para manutenção</li>
               <li>
@@ -94,11 +56,6 @@ const Informacoes = () => {
             <div className={styles.tituloIcon}>
               <ExplamationPoint />
               Calendário das Atividades
-            </div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit hac
-              habitant facilisi, sodales inceptos turpis mollis convallis risus
-              ornare:
             </div>
             <ol className={styles.duvidasList}>
               <li>
@@ -135,11 +92,6 @@ const Informacoes = () => {
             <div className={styles.tituloIcon}>
               <ExplamationPoint />
               Eventos Especiais
-            </div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit hac
-              habitant facilisi, sodales inceptos turpis mollis convallis risus
-              ornare:
             </div>
             <ol className={styles.duvidasList}>
               <li>
@@ -217,45 +169,6 @@ const Informacoes = () => {
                 icon={LogoBlue}
               />
             </div>
-            <div className={styles.tituloIcon}>Título</div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit hac
-              habitant facilisi, sodales inceptos turpis mollis convallis risus
-              ornare vehicula elementum eleifend, aliquet maecenas litora
-              cubilia vitae interdum habitasse posuere ex. Rutrum torquent
-              ullamcorper taciti cubilia neque enim, nostra risus erat suscipit
-              tempor, donec maecenas morbi cursus sagittis.
-            </div>
-            <ol className={styles.duvidasList}>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-            </ol>
-            <div className={styles.separator}></div>
-            <div>
-              <Label
-                label="Yellow Filme"
-                type="orange"
-                border="squareRound"
-                icon={LogoLabelOrange}
-              />
-            </div>
-            <div className={styles.tituloIcon}>Título</div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit hac
-              habitant facilisi, sodales inceptos turpis mollis convallis risus
-              ornare vehicula elementum eleifend, aliquet maecenas litora
-              cubilia vitae interdum habitasse posuere ex. Rutrum torquent
-              ullamcorper taciti cubilia neque enim, nostra risus erat suscipit
-              tempor, donec maecenas morbi cursus sagittis.
-            </div>
-            <ol className={styles.duvidasList}>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-            </ol>
           </div>
         </div>
       </div>
