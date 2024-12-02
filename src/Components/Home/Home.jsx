@@ -29,17 +29,15 @@ const Home = () => {
 
   const [hovered, setHovered] = React.useState(null);
   const handleMouseEnter = (label) => {
-    console.log('hover...');
     setHovered(label);
   };
 
   const handleMouseLeave = () => {
-    console.log('leave..');
-    setHovered(null);
+    setHovered('Casa Caju');
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState("");
+  const [currentVideo, setCurrentVideo] = useState("nMUyz26jWG0");
 
   const openModalWithVideo = (videoUrl) => {
     setCurrentVideo(videoUrl);
@@ -320,25 +318,20 @@ const Home = () => {
         onMouseLeave={handleMouseLeave}
       />
     </div>
-        {/* <div className={styles.cardReserva}>
+        <div className={styles.cardReserva}>
           <div className={styles.cardReservaMobile}>
-            <CardButtonLeft className={styles.cardButtons} />
-            <Card />
-            <CardButtonRight className={styles.cardButtons} />
+            {currentVideo && currentVideo !== '' && (
+              <iframe width="315" height="560"
+                src={`https://youtube.com/embed/${currentVideo}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+            )}
+          
           </div>
-        </div> */}
+        </div>
       </section>
-
-      {isModalOpen && (
-        <Modal onClose={closeModal}>
-          <iframe width="315" height="560"
-            src={`https://youtube.com/embed/${currentVideo}`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></iframe>
-        </Modal>
-      )}
 
       <section
         ref={(el) => (sectionRefs.current[4] = el)}
