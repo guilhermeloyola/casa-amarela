@@ -142,7 +142,7 @@ const Home = () => {
       >
         <img
           className={styles.desktop}
-          src="src/Assets/home_1.png"
+          src="home_1.png"
           alt="Quarto"
         />
         <img
