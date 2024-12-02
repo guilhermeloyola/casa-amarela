@@ -5,7 +5,9 @@ import LogoLabelRedAccent from '../../Assets/logo_label_red_accent.svg?react';
 
 const SpeechBalloon = (props) => {
   return (
-    <div className={`${styles.speechBalloon} ${styles[props.state]}`}>
+    <div className={`${styles.speechBalloon} ${styles[props.state]}`} onClick={props.onClick}
+    onMouseEnter={props.onMouseEnter} 
+    onMouseLeave={props.onMouseLeave}>
       {props.state == 'selected' && <LogoLabelRedAccent />}
       {props.state == 'unselected' && <LogoLabelRed />}
       {props.label}

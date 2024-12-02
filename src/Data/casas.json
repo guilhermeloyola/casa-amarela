@@ -1,4 +1,36 @@
-[
+[{
+  "nome": "Casa Rio",
+  "descricao": "A Casa Rio oferece 4 dormitórios, sendo 3 suítes e 1 dormitório com banheiro exclusivo ao lado. Todos os quartos têm ar-condicionado, acomodando confortavelmente até 9 pessoas. A casa possui uma varanda espaçosa, perfeita para momentos de lazer e convivência, além de uma cozinha completa, sala de estar e piscina com uma vista espetacular da Lagoa do Santana.",
+  "comodidades": [
+   "vista para a Lagoa do Santana",
+   "3 camas de casal",
+   "3 camas de solteiro",
+   "3 suítes",
+   "1 dormitório com banheiro exclusivo ao lado",
+   "Capacidade para até 9 pessoas.",
+   "Cozinha completa",
+   "sala de estar",
+   "varanda",
+   "piscina",
+   "Wi-Fi fibra óptica"
+  ],
+  "imagens": [
+    "/src/Assets/casa_rio_hospitality.png"
+  ],
+  "video": "https://youtube.com/embed/VapylyL0QcY",
+  "localizacao": "Barrinha, próxima à Lagoa do Santana",
+  "localizacaoImagem": "src/Assets/MapaCasaRio.png",
+  "localizacaoLink": "https://maps.app.goo.gl/fdKX5n2arRXkBBc88",
+  "descricaoLocalizacao": "Localizada na Barrinha, próxima à Lagoa do Santana.",
+  "restricoesGerais": "",
+  "restricoesCasa": "",
+  "botoes": [
+    {
+      "descricao": "Hospitality",
+      "icon": "<svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.7 9.00715H20.3927V11.1073H14.1359L19.591 14.2564L18.5419 16.0735L10.5017 11.4319L2.46155 16.0735L1.41051 14.2564L6.86565 11.1073H0.61084V9.00715H6.30351L1.41051 6.18457L2.46155 4.36552L7.63364 7.35239L4.64677 2.1803L6.46581 1.12926L9.45268 6.30333V0.32959H11.5508V6.30333L14.5377 1.12926L16.3547 2.1803L13.3699 7.35239L18.5419 4.36552L19.591 6.18457L14.7 9.00715ZM9.45286 16.1151H11.553V20.1094H9.45286V16.1151Z\" fill=\"#F3D7BE\"></path></svg>"
+    }
+  ]
+},
     {
       "nome": "Casa Sal",
       "descricao": "A Casa Sal conta com 4 suítes cuidadosamente projetadas para proporcionar conforto e sofisticação. Todas as suítes possuem ar-condicionado, oferecendo um refúgio ideal para até 8 pessoas.",
@@ -20,7 +52,7 @@
         "https://drive.google.com/thumbnail?id=1mCMs7OnCrW4snrlvi8INO64gQhVaBiw1",
         "https://drive.google.com/thumbnail?id=1sWuTP9B5aOy9hXjVqa2JB_uCmQoEXACr",
         "https://drive.google.com/thumbnail?id=16rOvy3Zg6Jaj32xIVm54Y-qVI5pJOgDj",
-"https://drive.google.com/thumbnail?id=1ZGq3MT5kqxsewXXoAwWQq5C4rewBn-Rv",
+      "https://drive.google.com/thumbnail?id=1ZGq3MT5kqxsewXXoAwWQq5C4rewBn-Rv",
 "https://drive.google.com/thumbnail?id=1lWcuvtXVapKSD6DI-xGiV7mw_dUTP7Wu",
 "https://drive.google.com/thumbnail?id=1ljWlmH29kTyoBC6OebNaz86q_R0P9g5S",
 "https://drive.google.com/thumbnail?id=1mU_KCCdpRHho6Fm4jYL55s8ER9U-w1D0",
@@ -28,6 +60,8 @@
       ],
       "video": "https://youtube.com/embed/VapylyL0QcY",
       "localizacao": "Barrinha, próxima à Lagoa do Santana",
+      "localizacaoImagem": "src/Assets/MapaCasaSal.png",
+      "localizacaoLink": "https://maps.app.goo.gl/fdKX5n2arRXkBBc88",
       "descricaoLocalizacao": "Localizada na Barrinha, próxima à Lagoa do Santana.",
       "restricoesGerais": "",
       "restricoesCasa": "",
@@ -40,6 +74,8 @@
     },
     {
       "nome": "Casa Caju",
+      "localizacaoImagem": "",
+      "localizacaoLink": "",
       "descricao": "A Casa Caju é uma acomodação ampla e requintada com 6 dormitórios, todos suítes. Quatro estão localizados na casa principal e dois em um anexo com varanda. Todos os quartos têm ar-condicionado, e a casa acomoda confortavelmente até 12 pessoas.",
       "comodidades": [
         "6 camas de casal",
@@ -80,6 +116,8 @@
         "Piscina",
         "Ar-condicionado em todos os quartos e salas"
       ],
+      "localizacaoImagem": "src/Assets/MapaCasaAbaete.png",
+      "localizacaoLink": "https://maps.app.goo.gl/cjsKHNe1FfJRNzZ76",
       "imagens": [
         "https://drive.google.com/thumbnail?id=1yb_XRNEi1hMJm-RXEKNB5kzXyPB3G1ko", "https://drive.google.com/thumbnail?id=1xFJ5nSopM_zX-78zf09VjiqAMxHKUaOE", "https://drive.google.com/thumbnail?id=1semYtMgR1sSJ-vSee3g56hImeTTayugL", "https://drive.google.com/thumbnail?id=1m3hTFKTbwky0YI7o-Zdp6Sp-r1tYfEZ3", "https://drive.google.com/thumbnail?id=1lOBxYTzmRQRKGXkL0ex3V1cYXjlCkgl2", "https://drive.google.com/thumbnail?id=1gX935quBFEWOcFXXHRZA5oo8xgLVdFnq", "https://drive.google.com/thumbnail?id=1SakHqZ7v-Yf0AFLnQMnFVbFEY7dBxqxy", "https://drive.google.com/thumbnail?id=1R83L8tqDd6ug0-Xu54S-H4ZlDri7tfAo", "https://drive.google.com/thumbnail?id=1KOvuH3n04UZe9QfuT8pFN2TlCFwn9i7t", "https://drive.google.com/thumbnail?id=1EFGS1Y_N6wfYK51yUAXeB_ZqAGig2r6L", "https://drive.google.com/thumbnail?id=1-0uSE62AjZ-k29YQFmuai3WW5aSAOx-o"
       ],
@@ -111,6 +149,8 @@
         "https://drive.google.com/thumbnail?id=1jKiaV_P26ETupuItotTuS6GBA4S_LZ1c","https://drive.google.com/thumbnail?id=1fU9BfWB0KBO51Xi6t4bmvLIkxb8gHq21","https://drive.google.com/thumbnail?id=1dULdV-wshtZX_I940R5vX0HqmCUx7VUm","https://drive.google.com/thumbnail?id=1YdXkCv_6kMC7jOcb5X37OXaZ4rAN26Ru","https://drive.google.com/thumbnail?id=1TMWVntcvia-vD8RfsTrcAwrWyTuut-gw","https://drive.google.com/thumbnail?id=1PcTEB9w0jk-Hl1ox-JkpDCBS-4oBHN9a","https://drive.google.com/thumbnail?id=1OR0v79lmEDOKficvl5qb7phcAtHb1R2W","https://drive.google.com/thumbnail?id=1IFN-xWhqRjaJM9LH9i5rXwmWckzZHOBn","https://drive.google.com/thumbnail?id=1Dg2Mfo_zelP_gWt7eyrR5MEeYMPE7wKL","https://drive.google.com/thumbnail?id=1CvTgV7VwBkNsN9KilUcYZIwvQWBqk80X","https://drive.google.com/thumbnail?id=1CXs43iCC3TXEWuuVtezmu8Ix29fUcSLO","https://drive.google.com/thumbnail?id=1BEozS6KN6k1ceHHeiyWbCH6rOLGSmoed","https://drive.google.com/thumbnail?id=18whEDoPH1GKi_ECwHmaaL_rt2OHWEjeI","https://drive.google.com/thumbnail?id=18KqW09MXGBM0CjwAxBMnJq5kmvrhA9E7","https://drive.google.com/thumbnail?id=17HjA5Ef-QV9VEtTkIbGmIBoxswL68OoA"
       ],
       "video": "https://youtube.com/embed/0DJrMjx0CBY",
+      "localizacaoImagem": "",
+      "localizacaoLink": "",
       "localizacao": "Barrinha, frente ao mar",
       "descricaoLocalizacao": "Localizada em Barrinha, frente ao mar.",
       "restricoesGerais": "",

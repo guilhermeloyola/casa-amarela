@@ -82,7 +82,7 @@ const Piawood = () => {
           Esportes
         </div>
       </div>
-      <div className={styles.containerBusca}>
+      {/* <div className={styles.containerBusca}>
         <Select
           placeholder="Eventos Exclusivos"
           icon="star"
@@ -272,7 +272,7 @@ const Piawood = () => {
           <div className={styles.pagina}>5</div>
           <ArrowRight />
         </div>
-      </div>
+      </div> */}
       <Footer backgroundColor="blue" labelColor="greenWhite" />
     </div>
   );

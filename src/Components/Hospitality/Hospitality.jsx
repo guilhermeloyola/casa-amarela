@@ -43,7 +43,9 @@ const Hospitality = () => {
             />
           </div>
           <div className={`${styles.mobile} ${styles.buttonMobileCard}`}>
-            <Button label="Reservar" type="red" />
+            <a href="http://Wa.me/5586999866447">
+              <Button label="Fale Conosco" type="red" />  
+            </a>
           </div>
           <div className={`${styles.passeioImg} ${styles.desktop}`}>
             <iframe
@@ -63,7 +65,9 @@ const Hospitality = () => {
           <img src="src/Assets/passeio_1.png" alt="Passeio" />
         </div>
         <div className={`${styles.desktop} ${styles.fullButton}`}>
-          <Button label="Reservar" type="red" />
+          <a href="http://Wa.me/5586999866447">
+              <Button label="Fale Conosco" type="red" />  
+            </a>
         </div>
       </div>
     );

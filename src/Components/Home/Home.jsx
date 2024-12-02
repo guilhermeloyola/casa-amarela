@@ -23,8 +23,34 @@ import Card from "../Utils/Card";
 import Button from "../Utils/Button";
 import Footer from "../Utils/Footer";
 import CasaAmarela from "../../Assets/logo_casa_amarela.svg?react";
+import Modal from "../Utils/Modal"; 
 
 const Home = () => {
+
+  const [hovered, setHovered] = React.useState(null);
+  const handleMouseEnter = (label) => {
+    console.log('hover...');
+    setHovered(label);
+  };
+
+  const handleMouseLeave = () => {
+    console.log('leave..');
+    setHovered(null);
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState("");
+
+  const openModalWithVideo = (videoUrl) => {
+    setCurrentVideo(videoUrl);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentVideo("");
+  };
+
   const sectionRefs = useRef([]);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [
@@ -142,7 +168,7 @@ const Home = () => {
       >
         <img
           className={styles.desktop}
-          src="home_1.png"
+          src="src/Assets/home_1.png"
           alt="Quarto"
         />
         <img
@@ -227,37 +253,93 @@ const Home = () => {
           alt="Mapa de estadias"
         />
         <div className={styles.casaRio}>
-          <SpeechBalloon label="Casa Rio" state="selected" />
-        </div>
-        <div className={styles.casaCaju}>
-          <SpeechBalloon label="Casa Caju" state="unselected" />
-        </div>
-        <div className={styles.casaSal}>
-          <SpeechBalloon label="Casa Sal" state="unselected" />
-        </div>
-        <div className={styles.casaCamua}>
-          <SpeechBalloon label="Casa Camuá" state="unselected" />
-        </div>
-        <div className={styles.casaBaete}>
-          <SpeechBalloon label="Casa Baeté" state="unselected" />
-        </div>
-        <div className={styles.casaDecker}>
-          <SpeechBalloon label="Casa Decker" state="unselected" />
-        </div>
-        <div className={styles.casaDharma}>
-          <SpeechBalloon label="Casa Dharma" state="unselected" />
-        </div>
-        <div className={styles.casaBruxa}>
-          <SpeechBalloon label="Casa da Bruxa" state="unselected" />
-        </div>
-        <div className={styles.cardReserva}>
+      <SpeechBalloon
+        label="Casa Rio"
+        state={hovered === "Casa Rio" ? "selected" : "unselected"}
+        onMouseEnter={() => handleMouseEnter("Casa Rio")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+    <div className={styles.casaCaju}>
+      <SpeechBalloon
+        label="Casa Caju"
+        state={hovered === "Casa Caju" ? "selected" : "unselected"}
+        onClick={() => openModalWithVideo("nMUyz26jWG0")}
+        onMouseEnter={() => handleMouseEnter("Casa Caju")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+    <div className={styles.casaSal}>
+      <SpeechBalloon
+        label="Casa Sal"
+        state={hovered === "Casa Sal" ? "selected" : "unselected"}
+        onClick={() => openModalWithVideo("VapylyL0QcY")}
+        onMouseEnter={() => handleMouseEnter("Casa Sal")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+    <div className={styles.casaCamua}>
+      <SpeechBalloon
+        label="Casa Camuá"
+        state={hovered === "Casa Camuá" ? "selected" : "unselected"}
+        onClick={() => openModalWithVideo("E8imIGla1mY")}
+        onMouseEnter={() => handleMouseEnter("Casa Camuá")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+    <div className={styles.casaBaete}>
+      <SpeechBalloon
+        label="Casa Baeté"
+        state={hovered === "Casa Baeté" ? "selected" : "unselected"}
+        onClick={() => openModalWithVideo("MsnJtitVbvo")}
+        onMouseEnter={() => handleMouseEnter("Casa Baeté")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+    <div className={styles.casaDecker}>
+      <SpeechBalloon
+        label="Casa Decker"
+        state={hovered === "Casa Decker" ? "selected" : "unselected"}
+        onMouseEnter={() => handleMouseEnter("Casa Decker")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+    <div className={styles.casaDharma}>
+      <SpeechBalloon
+        label="Casa Dharma"
+        state={hovered === "Casa Dharma" ? "selected" : "unselected"}
+        onMouseEnter={() => handleMouseEnter("Casa Dharma")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+    <div className={styles.casaBruxa}>
+      <SpeechBalloon
+        label="Casa da Bruxa"
+        state={hovered === "Casa da Bruxa" ? "selected" : "unselected"}
+        onMouseEnter={() => handleMouseEnter("Casa da Bruxa")}
+        onMouseLeave={handleMouseLeave}
+      />
+    </div>
+        {/* <div className={styles.cardReserva}>
           <div className={styles.cardReservaMobile}>
             <CardButtonLeft className={styles.cardButtons} />
             <Card />
             <CardButtonRight className={styles.cardButtons} />
           </div>
-        </div>
+        </div> */}
       </section>
+
+      {isModalOpen && (
+        <Modal onClose={closeModal}>
+          <iframe width="315" height="560"
+            src={`https://youtube.com/embed/${currentVideo}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+        </Modal>
+      )}
+
       <section
         ref={(el) => (sectionRefs.current[4] = el)}
         className={`${styles.section} ${styles.piawoodSection}`}
@@ -369,7 +451,7 @@ const Home = () => {
         id="videoBanner"
         className={`${styles.parallax} ${styles.videoBanner} ${styles.section}`}
       >
-        <img src="src/Assets/video_banner.png" alt="Video Banner" />
+        <iframe width="100%" height="900" src="https://www.youtube.com/embed/Hjq-ZzT1tjw?si=7ACuc3MS861aW3Uc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
         <Footer labelColor="yellowWhite" />
       </section>
     </div>
