@@ -254,7 +254,8 @@ const Home = () => {
       <SpeechBalloon
         label="Casa Rio"
         state={hovered === "Casa Rio" ? "selected" : "unselected"}
-        onMouseEnter={() => handleMouseEnter("Casa Rio")}
+        onMouseEnter={() => handleMouseEnter("Casa Rio") } 
+        onClick={() => openModalWithVideo("rsJefiaWU9U")}
         onMouseLeave={handleMouseLeave}
       />
     </div>
