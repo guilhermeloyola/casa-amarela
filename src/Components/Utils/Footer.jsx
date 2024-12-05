@@ -26,7 +26,7 @@ const Footer = (props) => {
           <ArrowRightFooter />
         </NavLink>
         <NavLink className={styles.link} to="/YellowFilme">
-          Yellow Filme
+          Yellow Film
           <ArrowRightFooter />
         </NavLink>
         <NavLink className={styles.link} to="/Informacoes">

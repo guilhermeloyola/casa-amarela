@@ -15,7 +15,14 @@
    "Wi-Fi fibra óptica"
   ],
   "imagens": [
-    "/src/Assets/casa_rio_hospitality.png"
+    "/src/Assets/casario/1.jpg",
+    "/src/Assets/casario/2.jpg",
+    "/src/Assets/casario/3.jpg",
+    "/src/Assets/casario/4.jpg",
+    "/src/Assets/casario/5.jpg",
+    "/src/Assets/casario/6.jpg",
+    "/src/Assets/casario/7.jpg",
+    "/src/Assets/casario/8.jpg"
   ],
   "video": "https://youtube.com/embed/VapylyL0QcY",
   "localizacao": "Barrinha, próxima à Lagoa do Santana",
@@ -43,18 +50,9 @@
         "Sala de estar com ar-condicionado"
       ],
       "imagens": [
-        "/src/Assets/casasal/CASASAL1.JPEG",
-        "/src/Assets/casasal/CASASAL2.JPEG",
-        "/src/Assets/casasal/CASASAL3.JPEG",
-        "/src/Assets/casasal/CASASAL5.JPEG",
-        "/src/Assets/casasal/CASASAL11.JPEG",
-        "/src/Assets/casasal/CASASAL13.JPEG",
-        "/src/Assets/casasal/CASASAL15.JPEG",
-        "/src/Assets/casasal/CASASAL19.JPEG",
-        "/src/Assets/casasal/CASASAL35.JPEG",
-        "/src/Assets/casasal/CASASAL36.JPEG",
-        "/src/Assets/casasal/CASASAL42.JPEG",
-        "/src/Assets/casasal/CASASAL44.JPEG",
+        "/src/Assets/casasal/CASASAL3.JPEG",                        
+        "/src/Assets/casasal/CASASAL15.JPEG",                        
+        "/src/Assets/casasal/CASASAL42.JPEG",        
         "/src/Assets/casasal/CASASAL47.JPEG",
         "/src/Assets/casasal/CASASAL52.JPEG"
       ],
