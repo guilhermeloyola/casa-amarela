@@ -51,7 +51,7 @@ const Home = () => {
   }));
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState("nMUyz26jWG0");
+  const [currentVideo, setCurrentVideo] = useState("rsJefiaWU9U");
 
   const openModalWithVideo = (videoUrl) => {
     setCurrentVideo(videoUrl);
