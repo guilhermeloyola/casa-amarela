@@ -42,11 +42,13 @@ const Hospitality = () => {
               content={passeio.descricao}
             />
           </div>
-          <div className={`${styles.mobile} ${styles.buttonMobileCard}`}>
-            <a href="http://Wa.me/5586999866447">
-              <Button label="Fale Conosco" type="red" />
-            </a>
-          </div>
+          <a
+            className={`${styles.mobile} ${styles.buttonMobileCard}`}
+            href="http://Wa.me/5586999866447"
+          >
+            <Button label="Fale Conosco" type="red" />
+          </a>
+
           <div className={`${styles.passeioImg} ${styles.desktop}`}>
             <iframe
               width="100%"
