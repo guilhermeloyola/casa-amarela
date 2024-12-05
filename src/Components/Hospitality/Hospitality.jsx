@@ -40,6 +40,7 @@ const Hospitality = () => {
               maxCharacters="maxCharacters30"
               color="black"
               content={passeio.descricao}
+              align="left"
             />
           </div>
           <a
