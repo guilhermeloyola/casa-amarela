@@ -33,7 +33,7 @@ const Header = (props) => {
             to="/YellowFilme"
             onClick={() => setNavbarOpen((prev) => !prev)}
           >
-            YELLOW FILME
+            YELLOW FILM
           </NavLink>
           <NavLink
             to="/Informacoes"
@@ -107,7 +107,7 @@ const Header = (props) => {
                 <NavLink to="/Piawood">Piawood</NavLink>
               </li>
               <li>
-                <NavLink to="/YellowFilme">Yellow Filme</NavLink>
+                <NavLink to="/YellowFilme">Yellow Film</NavLink>
               </li>
               <li>
                 <NavLink to="/Informacoes">Informações</NavLink>

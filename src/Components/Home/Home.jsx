@@ -29,17 +29,15 @@ const Home = () => {
 
   const [hovered, setHovered] = React.useState(null);
   const handleMouseEnter = (label) => {
-    console.log('hover...');
     setHovered(label);
   };
 
   const handleMouseLeave = () => {
-    console.log('leave..');
-    setHovered(null);
+    setHovered('Casa Caju');
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState("");
+  const [currentVideo, setCurrentVideo] = useState("nMUyz26jWG0");
 
   const openModalWithVideo = (videoUrl) => {
     setCurrentVideo(videoUrl);
@@ -320,25 +318,20 @@ const Home = () => {
         onMouseLeave={handleMouseLeave}
       />
     </div>
-        {/* <div className={styles.cardReserva}>
+        <div className={styles.cardReserva}>
           <div className={styles.cardReservaMobile}>
-            <CardButtonLeft className={styles.cardButtons} />
-            <Card />
-            <CardButtonRight className={styles.cardButtons} />
+            {currentVideo && currentVideo !== '' && (
+              <iframe width="315" height="560"
+                src={`https://youtube.com/embed/${currentVideo}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+            )}
+          
           </div>
-        </div> */}
+        </div>
       </section>
-
-      {isModalOpen && (
-        <Modal onClose={closeModal}>
-          <iframe width="315" height="560"
-            src={`https://youtube.com/embed/${currentVideo}`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></iframe>
-        </Modal>
-      )}
 
       <section
         ref={(el) => (sectionRefs.current[4] = el)}
@@ -375,7 +368,7 @@ const Home = () => {
             </div>
             <TextContent
               type="black"
-              content="Piawood é o hub cultural da Casa Amarela, dedicado ao fomento da cultura e talentos locais na região de Barrinha, PI. Atuando como curador e plataforma de crescimento, Piawood promove eventos que integram música, artes visuais, gastronomia e esporte, gerando impacto na cena cultural da região. Além disso, a produtora Yellow Filme cria conteúdos audiovisuais que documentam e divulgam essas experiências, conectando a riqueza cultural local a um público mais amplo."
+              content="Piawood é o hub cultural da Casa Amarela, dedicado ao fomento da cultura e talentos locais na região de Barrinha, PI. Atuando como curador e plataforma de crescimento, Piawood promove eventos que integram música, artes visuais, gastronomia e esporte, gerando impacto na cena cultural da região. Além disso, a produtora Yellow Film cria conteúdos audiovisuais que documentam e divulgam essas experiências, conectando a riqueza cultural local a um público mais amplo."
               maxCharacters="maxCharacters30"
             />
           </div>
@@ -425,7 +418,7 @@ const Home = () => {
             <div className={styles.hospitalityInfo}>
               <div className={styles.hospitalityTitle}>
                 <Label
-                  label="Yellow Filme"
+                  label="Yellow Film"
                   type="orange"
                   icon={LogoLabelOrange}
                   border="squareRound"
@@ -433,7 +426,7 @@ const Home = () => {
               </div>
               <TextContent
                 type="blackBrown"
-                content="A Yellow Filme é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Filme valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
+                content="A Yellow Film é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Film valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
                 maxCharacters="maxCharacters30"
               />
               <Hyperlink
@@ -451,7 +444,7 @@ const Home = () => {
         id="videoBanner"
         className={`${styles.parallax} ${styles.videoBanner} ${styles.section}`}
       >
-        <iframe width="100%" height="900" src="https://www.youtube.com/embed/Hjq-ZzT1tjw?si=7ACuc3MS861aW3Uc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+        <iframe width="100%" height="2000" src="https://www.youtube.com/embed/Hjq-ZzT1tjw?si=7ACuc3MS861aW3Uc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
         <Footer labelColor="yellowWhite" />
       </section>
     </div>

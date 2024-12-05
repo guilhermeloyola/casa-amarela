@@ -28,9 +28,17 @@ import PlusCircle from "../../Assets/plus_circle_gray.svg?react";
 import casasData from "../../Data/casas.json";
 import { NavLink } from "react-router-dom";
 import Title from "../Utils/Title";
+import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from "react-image-gallery";
+
 const HospitalityHospedagem = () => {
   const [showLocation, setLocation] = React.useState("true");
   const casas = casasData.map((casa) => {
+    const images = casa.imagens.map((img) => ({
+      original: img,
+      thumbnail: img,
+    }));
+
     return (
       <div className={styles.containerCasas} key={casa.nome}>
         <div className={styles.desktop}>
@@ -38,212 +46,14 @@ const HospitalityHospedagem = () => {
         </div>
 
         <div className={styles.casas}>
-          <div className={styles.imgLabels}>
-            <img
-              className={styles.desktop}
-              src={casa.imagens[0]}
-              alt="Casa Rio"
+        <ImageGallery
+
+              items={images}
+              showThumbnails={false}
+              showPlayButton={false}
+              showFullscreenButton={false}
+              autoPlay={false}
             />
-            <img
-              className={styles.mobile}
-              src="src/Assets/casa_rio_hospitality_mobile.png"
-              alt="Casa Rio"
-            />
-            <div className={`${styles.mobile} ${styles.containerBusca}`}>
-              <Select
-                input="select"
-                placeholder="Casa Rio"
-                icon="logo"
-              ></Select>
-              <div>
-                <Button label="Buscar" type="red" icon={MagnifyingGlass} />
-              </div>
-            </div>
-            <div className={`${styles.labels} ${styles.desktop}`}>
-              <Label
-                label="Hospitality"
-                type="red"
-                border="squareRound"
-                icon={LogoRedAccent}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Barrinha"
-                type="white"
-                border="squareRound"
-                icon={LocationPin}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Vista para Lagoa do Santana"
-                type="white"
-                border="squareRound"
-                icon={Eye}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Vista para Lagoa do Santana"
-                type="white"
-                border="squareRound"
-                icon={Moon}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="9 pessoas"
-                type="white"
-                border="squareRound"
-                icon={People}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Cama de Casal"
-                type="white"
-                border="squareRound"
-                icon={DoubleBed}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Cama de Solteiro"
-                type="white"
-                border="squareRound"
-                icon={Bed}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Cozinha Completa"
-                type="white"
-                border="squareRound"
-                icon={Fridge}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Piscina"
-                type="white"
-                border="squareRound"
-                icon={Pool}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="WiFi Fibra Ótica"
-                type="white"
-                border="squareRound"
-                icon={Wifi}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Ar-Condicionado"
-                type="white"
-                border="squareRound"
-                icon={SnowFlake}
-                multiple="multiple"
-                size="small"
-              />
-              <Label
-                label="Varanda"
-                type="white"
-                border="squareRound"
-                icon={Balcony}
-                multiple="multiple"
-                size="small"
-              />
-            </div>
-            <div className={`${styles.labels} ${styles.mobile}`}>
-              <Label
-                label="Hospitality"
-                type="red"
-                border="squareRound"
-                icon={LogoRedAccent}
-                multiple="multiple"
-              />
-              <Label
-                label="Barrinha"
-                type="white"
-                border="squareRound"
-                icon={LocationPin}
-                multiple="multiple"
-              />
-              <Label
-                label="Vista para Lagoa do Santana"
-                type="white"
-                border="squareRound"
-                icon={Eye}
-                multiple="multiple"
-              />
-              <Label
-                label="Vista para Lagoa do Santana"
-                type="white"
-                border="squareRound"
-                icon={Moon}
-                multiple="multiple"
-              />
-              <Label
-                label="9 pessoas"
-                type="white"
-                border="squareRound"
-                icon={People}
-                multiple="multiple"
-              />
-              <Label
-                label="Cama de Casal"
-                type="white"
-                border="squareRound"
-                icon={DoubleBed}
-                multiple="multiple"
-              />
-              <Label
-                label="Cama de Solteiro"
-                type="white"
-                border="squareRound"
-                icon={Bed}
-                multiple="multiple"
-              />
-              <Label
-                label="Cozinha Completa"
-                type="white"
-                border="squareRound"
-                icon={Fridge}
-                multiple="multiple"
-              />
-              <Label
-                label="Piscina"
-                type="white"
-                border="squareRound"
-                icon={Pool}
-                multiple="multiple"
-              />
-              <Label
-                label="WiFi Fibra Ótica"
-                type="white"
-                border="squareRound"
-                icon={Wifi}
-                multiple="multiple"
-              />
-              <Label
-                label="Ar-Condicionado"
-                type="white"
-                border="squareRound"
-                icon={SnowFlake}
-                multiple="multiple"
-              />
-              <Label
-                label="Varanda"
-                type="white"
-                border="squareRound"
-                icon={Balcony}
-                multiple="multiple"
-              />
-            </div>
-          </div>
           <div className={`${styles.galeria} ${styles.desktop}`}>
             <iframe
               width="100%"

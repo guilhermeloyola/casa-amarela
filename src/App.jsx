@@ -5,7 +5,7 @@ import FaleConosco from './Components/FaleConosco/FaleConosco.jsx';
 import Informacoes from './Components/Informacoes/Informacoes.jsx';
 import Piawood from './Components/Piawood/Piawood.jsx';
 import Hospitality from './Components/Hospitality/Hospitality.jsx';
-import YellowFilme from './Components/YellowFilme/YellowFilme.jsx';
+import YellowFilme from './Components/YellowFilme/YellowFilm.jsx';
 import HospitalityHospedagem from './Components/Hospitality/HospitalityHospedagem.jsx';
 
 function App() {
