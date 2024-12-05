@@ -565,12 +565,10 @@
     height: auto;
     position: relative;
     left: 0;
-    padding: 0rem 10rem;
   }
   .casaAmarelaEstatisticas {
     width: 100%;
     height: min-content;
-    padding: 0rem 10rem;
     left: 0;
     transform: none;
   }
