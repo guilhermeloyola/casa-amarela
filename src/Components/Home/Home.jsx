@@ -38,11 +38,11 @@ const Home = () => {
   };
 
   const gallery = [
-    "public/src/Assets/galeria/1.jpg",
+    "src/Assets/galeria/1.jpg",
 
-    "public/src/Assets/galeria/2.jpg",
+    "src/Assets/galeria/2.jpg",
 
-    "public/src/Assets/galeria/3.jpg",
+    "src/Assets/galeria/3.jpg",
   ];
 
   const images = gallery.map((img) => ({
