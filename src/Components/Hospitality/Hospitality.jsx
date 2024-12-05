@@ -120,35 +120,9 @@ const Hospitality = () => {
           Esportes
         </div>
       </div>
-      {/* <div className={styles.containerBusca}>
-        <Select
-          placeholder="Eventos Exclusivos"
-          icon="star"
-          input="select"
-        ></Select>
-        <Select
-          placeholder="Período de Temporada"
-          icon="calendar"
-          input="select"
-        ></Select>
-        <Select placeholder="Lua" icon="moon" input="select"></Select>
-        <div>
-          <Button type="red" label="Buscar" icon={Lupa}></Button>
-        </div>
-      </div> */}
+      
       <div className={styles.gridPasseios}>
         <div className={styles.passeios}>{passeios}</div>
-        {/* <div className={styles.paginacao}>
-          <ArrowLeft />
-          <div className={`${styles.pagina} ${styles.paginaSelecionada}`}>
-            1
-          </div>
-          <div className={styles.pagina}>2</div>
-          <div className={styles.pagina}>3</div>
-          <div className={styles.pagina}>4</div>
-          <div className={styles.pagina}>5</div>
-          <ArrowRight />
-        </div> */}
       </div>
 
       <Footer labelColor="redWhite" />

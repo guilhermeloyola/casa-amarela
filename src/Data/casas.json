@@ -85,17 +85,11 @@
         "Wi-Fi fibra óptica"
       ],
       "imagens": [
-        "/src/Assets/casacaju/1.JPG",
-        "/src/Assets/casacaju/2.JPG",
-        "/src/Assets/casacaju/3.JPG",
-        "/src/Assets/casacaju/4.JPG",
-        "/src/Assets/casacaju/5.JPG",
-        "/src/Assets/casacaju/6.JPG",
-        "/src/Assets/casacaju/7.JPG",
-        "/src/Assets/casacaju/8.JPG",
-        "/src/Assets/casacaju/9.JPG",
-        "/src/Assets/casacaju/10.JPG",
-        "/src/Assets/casacaju/11.JPG"
+        "/src/Assets/casacaju/1.jpg",
+        "/src/Assets/casacaju/2.jpg",
+        "/src/Assets/casacaju/3.jpg",
+        "/src/Assets/casacaju/4.jpg",
+        "/src/Assets/casacaju/5.jpg"
       ],
       "video": "https://youtube.com/embed/nMUyz26jWG0",
       "localizacao": "Barrinha, próxima à Lagoa do Santana",
