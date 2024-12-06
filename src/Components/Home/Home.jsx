@@ -28,6 +28,43 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 
 const Home = () => {
+  const renderVideo = (item) => {
+    return (
+      <div className="video-wrapper">
+        <iframe
+          width="100%"
+          height="480px"
+          src={item.embedUrl}
+          frameBorder="0"
+          allowFullScreen
+          title="ex"
+        />
+      </div>
+    );
+  };
+  const videos = [
+    {
+      embedUrl:
+        "https://youtube.com/embed/rsJefiaWU9U?autoplay=1&showinfo=0&controls=0",
+      renderItem: renderVideo.bind(this),
+    },
+    {
+      embedUrl:
+        "https://youtube.com/embed/ivmkDTmAPeA?autoplay=1&showinfo=0&controls=0",
+      renderItem: renderVideo.bind(this),
+    },
+    {
+      embedUrl:
+        "https://youtube.com/embed/kCstTSYhfkI?autoplay=1&showinfo=0&controls=0",
+      renderItem: renderVideo.bind(this),
+    },
+    {
+      embedUrl:
+        "https://youtube.com/embed/4oRnVKAd8RU?autoplay=1&showinfo=0&controls=0",
+      renderItem: renderVideo.bind(this),
+    },
+  ];
+
   const [hovered, setHovered] = React.useState(null);
   const handleMouseEnter = (label) => {
     setHovered(label);
@@ -340,7 +377,7 @@ const Home = () => {
           />
         </div>
         <div className={styles.cardReserva}>
-          <div className={styles.cardReservaMobile}>
+          <div className={`${styles.desktop}`}>
             {currentVideo && currentVideo !== "" && (
               <iframe
                 width="315"
@@ -351,6 +388,9 @@ const Home = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               ></iframe>
             )}
+          </div>
+          <div className={`${styles.cardReservaMobile} ${styles.mobile}`}>
+            <ImageGallery items={videos} showIndex showPlayButton />
           </div>
         </div>
       </section>
