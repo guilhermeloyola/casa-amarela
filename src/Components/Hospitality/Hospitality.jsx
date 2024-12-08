@@ -40,13 +40,16 @@ const Hospitality = () => {
               maxCharacters="maxCharacters30"
               color="black"
               content={passeio.descricao}
+              align="left"
             />
           </div>
-          <div className={`${styles.mobile} ${styles.buttonMobileCard}`}>
-            <a href="http://Wa.me/5586999866447">
-              <Button label="Fale Conosco" type="red" />  
-            </a>
-          </div>
+          <a
+            className={`${styles.mobile} ${styles.buttonMobileCard}`}
+            href="http://Wa.me/5586999866447"
+          >
+            <Button label="Fale Conosco" type="red" />
+          </a>
+
           <div className={`${styles.passeioImg} ${styles.desktop}`}>
             <iframe
               width="100%"
@@ -62,12 +65,22 @@ const Hospitality = () => {
           </div>
         </div>
         <div className={`${styles.passeioImg} ${styles.mobile}`}>
-          <img src="src/Assets/passeio_1.png" alt="Passeio" />
+          <iframe
+            width="100%"
+            height="100%"
+            src={`${
+              passeio.video
+            }?autoplay=1&controls=0&fs=0&loop=0&color=white&playlist=${
+              passeio.video.split("embed/")[1]
+            }`}
+            title="YouTube video player"
+            referrerPolicy="strict-origin-when-cross-origin"
+          ></iframe>
         </div>
         <div className={`${styles.desktop} ${styles.fullButton}`}>
           <a href="http://Wa.me/5586999866447">
-              <Button label="Fale Conosco" type="red" />  
-            </a>
+            <Button label="Fale Conosco" type="red" />
+          </a>
         </div>
       </div>
     );
@@ -120,7 +133,7 @@ const Hospitality = () => {
           Esportes
         </div>
       </div>
-      
+
       <div className={styles.gridPasseios}>
         <div className={styles.passeios}>{passeios}</div>
       </div>

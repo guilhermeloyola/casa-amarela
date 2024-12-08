@@ -1,17 +1,17 @@
-import React from 'react';
-import styles from './YellowFilm.module.css';
-import Header from '../Utils/Header';
-import LogoSea from '../../Assets/logo_sea.svg?react';
-import LogoOrange from '../../Assets/logo_label_orange.svg?react';
-import LogoOrangeAccent from '../../Assets/logo_label_orange_accent.svg?react';
-import PlusCircle from '../../Assets/plus_circle.svg?react';
-import House from '../../Assets/icon_house.svg?react';
-import Vision from '../../Assets/icon_vision.svg?react';
-import Values from '../../Assets/icon_values.svg?react';
-import TextContent from '../Utils/TextContent';
-import Label from '../Utils/Label';
-import Footer from '../Utils/Footer';
-import LogoLabelOrange from '../../Assets/logo_label_orange.svg?react';
+import React from "react";
+import styles from "./YellowFilm.module.css";
+import Header from "../Utils/Header";
+import LogoSea from "../../Assets/logo_sea.svg?react";
+import LogoOrange from "../../Assets/logo_label_orange.svg?react";
+import LogoOrangeAccent from "../../Assets/logo_label_orange_accent.svg?react";
+import PlusCircle from "../../Assets/plus_circle.svg?react";
+import House from "../../Assets/icon_house.svg?react";
+import Vision from "../../Assets/icon_vision.svg?react";
+import Values from "../../Assets/icon_values.svg?react";
+import TextContent from "../Utils/TextContent";
+import Label from "../Utils/Label";
+import Footer from "../Utils/Footer";
+import LogoLabelOrange from "../../Assets/logo_label_orange.svg?react";
 
 const YellowFilme = () => {
   return (
@@ -163,7 +163,16 @@ const YellowFilme = () => {
         </div>
       </div> */}
       <div className={styles.videoBanner}>
-      <iframe width="100%" height="900" src="https://www.youtube.com/embed/UMWetbnkElM?si=G7cYQr-TY6mkxwXK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          width="100%"
+          height="900"
+          src="https://www.youtube.com/embed/UMWetbnkElM?si=G7cYQr-TY6mkxwXK"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
       {/* <div className={styles.equipe}>
         Equipe

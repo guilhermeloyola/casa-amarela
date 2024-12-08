@@ -46,14 +46,16 @@ const HospitalityHospedagem = () => {
         </div>
 
         <div className={styles.casas}>
-        <ImageGallery
-
+          <div className={styles.mapa}>
+            <ImageGallery
               items={images}
               showThumbnails={false}
               showPlayButton={false}
               showFullscreenButton={false}
               autoPlay={false}
             />
+          </div>
+
           <div className={`${styles.galeria} ${styles.desktop}`}>
             <iframe
               width="100%"
@@ -106,14 +108,10 @@ const HospitalityHospedagem = () => {
           </div>
 
           <div className={styles.localizacaoInformacoes}>
-
-                
-                {casa.localizacaoLink && casa.localizacaoLink !== '' && (
-                  <>
-                  <div className={styles.menuCard}>
-                  <span>
-                    Localização
-                  </span>
+            {casa.localizacaoLink && casa.localizacaoLink !== "" && (
+              <>
+                <div className={styles.menuCard}>
+                  <span>Localização</span>
                 </div>
 
                 <div className={styles.localizacao}>
@@ -132,14 +130,11 @@ const HospitalityHospedagem = () => {
                     </a>
                   </div>
                 </div>
-                  </>
-                  
-                )}
+              </>
+            )}
 
-                
-           
-             <a href="http://Wa.me/5586999866447">
-              <Button label="Fale Conosco" type="red" />  
+            <a href="http://Wa.me/5586999866447">
+              <Button label="Fale Conosco" type="red" />
             </a>
           </div>
         </div>
@@ -172,7 +167,7 @@ const HospitalityHospedagem = () => {
           <NavLink to="/Hospitality">Passeios</NavLink>
         </div>
       </div>
-    
+
       {casas}
       <Footer backgroundColor="redAccent" labelColor="redWhite" />
     </div>
