@@ -1,42 +1,46 @@
-@import url('https://fonts.cdnfonts.com/css/futura-std-4?styles=52567,52583');
-@import url('https://fonts.cdnfonts.com/css/league-gothic?styles=29994');@import url('https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98776');
+@import url("https://fonts.cdnfonts.com/css/futura-std-4?styles=52567,52583");
+@import url("https://fonts.cdnfonts.com/css/league-gothic?styles=29994");
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98776");
 * {
+  all: unset;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 body {
   margin: 0px;
 
-  --type-first: 'Futura Std', sans-serif;
-  --type-second: 'League Gothic';
-  --type-third: 'SF Pro Display', , sans-serif;;
+  --type-first: "Futura Std", sans-serif;
+  --type-second: "League Gothic";
+  --type-third: "SF Pro Display", , sans-serif;
   font-family: var(--type-first);
 
-  --color-yellow: #DBA73E;
-  --color-yellow-accent: #1E1E1E;
-  --color-orange: #FF9933;
-  --color-orange-accent: #E47043;
+  --color-yellow: #dba73e;
+  --color-yellow-accent: #1e1e1e;
+  --color-orange: #ff9933;
+  --color-orange-accent: #e47043;
   --color-red: #884129;
-  --color-red-accent: #F3D7BE;
-  --color-red-accent-2: #F5ECDF;
-  --color-red-accent-3: #E8B995;
-  --color-green: #898C64;
-  --color-green-accent: #FFF;
-  --color-blue: #A7BDD1;
-  --color-blue-accent: #8A8C64;
+  --color-red-accent: #f3d7be;
+  --color-red-accent-2: #f5ecdf;
+  --color-red-accent-3: #e8b995;
+  --color-green: #898c64;
+  --color-green-accent: #fff;
+  --color-blue: #a7bdd1;
+  --color-blue-accent: #8a8c64;
   --color-brown: #210600;
 
-  --c1: #FFF;
-  --c2: #E0E0E0;
-  --c3: #CCC;
+  --c1: #fff;
+  --c2: #e0e0e0;
+  --c3: #ccc;
   --c4: #585858;
-  --c5: #1E1E1E;
+  --c5: #1e1e1e;
   --c6: #000;
   color: var(--c1);
-  background-color: #F5ECDF;
+  background-color: #f5ecdf;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0px;
   margin: 0px;
@@ -47,7 +51,8 @@ img {
   max-width: 100%;
 }
 
-button, input {
+button,
+input {
   display: block;
   font-size: 1rem;
   font-style: var(--type-first);
@@ -72,9 +77,7 @@ button, input {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
-
 }
