@@ -243,7 +243,7 @@
 }
 
 .casaAmarelaImg {
-  -webkit-transform: translateY(0);
+  -webkit-transform: none;
   transform: translateY(0);
   display: flex;
   gap: 0.25rem;
@@ -253,19 +253,19 @@
 }
 
 .casaAmarelaImg.hidden {
-  -webkit-transform: translateY(-100%);
+  -webkit-transform: none;
   transform: translateY(-100%);
   opacity: 1;
 }
 
 .casaAmarelaEstatisticas {
-  -webkit-transform: translateY(100%);
+  -webkit-transform: none;
   transform: translateY(100%);
   opacity: 0;
 }
 
 .casaAmarelaEstatisticas.visible {
-  -webkit-transform: translateY(0);
+  -webkit-transform: none;
   transform: translateY(0);
   opacity: 1;
 }
@@ -312,7 +312,7 @@
 }
 
 .piawoodImg {
-  -webkit-transform: translateY(0);
+  -webkit-transform: none;
   transform: translateY(0);
   display: flex;
   gap: 0.25rem;
@@ -323,19 +323,19 @@
 
 .piawoodImg.hidden {
   opacity: 0;
-  -webkit-transform: translateY(-100%);
+  -webkit-transform: none;
   transform: translateY(-100%);
 }
 
 .piaWoodEstatisticas {
-  -webkit-transform: translateY(100%);
+  -webkit-transform: none;
   transform: translateY(100%);
   opacity: 0;
   height: 0;
 }
 
 .piaWoodEstatisticas.visible {
-  -webkit-transform: translateY(0);
+  -webkit-transform: none;
   transform: translateY(0);
   opacity: 1;
   height: 100%;
@@ -363,13 +363,13 @@
 
 .hidden {
   opacity: 0;
-  -webkit-transform: translateY(100%);
+  -webkit-transform: none;
   transform: translateY(100%);
 }
 
 .visible {
   opacity: 0;
-  -webkit-transform: translateY(0);
+  -webkit-transform: none;
   transform: translateY(0);
 }
 
