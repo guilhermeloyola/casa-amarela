@@ -588,7 +588,7 @@
     left: 0;
   }
   .casaAmarelaEstatisticas {
-    width: 100%;
+    width: 70%;
     height: min-content;
     left: 0;
     -webkit-transform: none;
@@ -616,7 +616,7 @@
   }
 
   .housesMap {
-    background: url("/src/Assets/hospitality_map_mobile.svg") center no-repeat;
+    background: none;
     padding: 0.25rem 0.5rem;
     border-radius: 1.5rem;
   }
