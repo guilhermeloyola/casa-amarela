@@ -576,13 +576,13 @@
     padding: 0rem 3rem;
   }
   .casaAmarelaImg {
-    width: 70%;
+    width: 100%;
     height: auto;
     position: relative;
     left: 0;
   }
   .casaAmarelaEstatisticas {
-    width: 70%;
+    width: 100%;
     height: min-content;
     left: 0;
     -webkit-transform: none;
