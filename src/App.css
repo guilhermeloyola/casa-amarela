@@ -5,6 +5,7 @@
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -webkit-animation: none !important;
 }
 
 body {
