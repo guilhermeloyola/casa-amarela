@@ -113,6 +113,10 @@
   .maxCharacters60 {
     max-width: 60ch;
   }
+  .textContent {
+    font-size: 1rem;
+    font-weight: 400;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
@@ -122,6 +126,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .textContent {
+    font-size: 1rem;
+    font-weight: 400;
   }
   .maxCharacters30 {
     max-width: 40ch;

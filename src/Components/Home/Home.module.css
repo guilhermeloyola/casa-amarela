@@ -6,12 +6,13 @@
 }
 
 .section {
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: height 1s ease-in-out, opacity 1s ease-in-out;
+  -webkit-transition: height 1s ease-in-out, opacity 1s ease-in-out;
   overflow-y: auto;
 }
 
@@ -30,7 +31,7 @@
 }
 
 /* .casaAmarelaSection {
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -59,7 +60,7 @@
 }
 
 .casaAmarelaInfo {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -67,7 +68,7 @@
 }
 
 .hospitalityInfo {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -161,21 +162,6 @@
   overflow: hidden;
 }
 
-.section {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: height 1s ease-in-out, opacity 1s ease-in-out;
-  overflow-y: auto;
-}
-
-.section.collapsing {
-  height: 0;
-  opacity: 0;
-}
-
 .container {
   padding: 0.25rem 1rem;
 }
@@ -211,7 +197,7 @@
 }
 
 .casaAmarelaInfo {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -223,7 +209,7 @@
 }
 
 .hospitalityInfo {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -238,7 +224,7 @@
 .casaAmarelaSection {
   display: flex;
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -250,12 +236,14 @@
   left: 10%;
   width: 45%;
   height: 100%;
+  -webkit-transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   display: flex;
   align-items: center;
 }
 
 .casaAmarelaImg {
+  -webkit-transform: translateY(0);
   transform: translateY(0);
   display: flex;
   gap: 0.25rem;
@@ -265,16 +253,19 @@
 }
 
 .casaAmarelaImg.hidden {
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   opacity: 1;
 }
 
 .casaAmarelaEstatisticas {
+  -webkit-transform: translateY(100%);
   transform: translateY(100%);
   opacity: 0;
 }
 
 .casaAmarelaEstatisticas.visible {
+  -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
 }
@@ -299,7 +290,7 @@
 .piawoodSection {
   display: flex;
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   padding: 3rem;
 }
@@ -311,6 +302,8 @@
   left: 10%;
   width: 40%;
   height: 100%;
+  -webkit-transition: height 1s ease-in-out, transform 1s ease-in-out,
+    opacity 1s ease-in-out;
   transition: height 1s ease-in-out, transform 1s ease-in-out,
     opacity 1s ease-in-out;
   display: flex;
@@ -319,6 +312,7 @@
 }
 
 .piawoodImg {
+  -webkit-transform: translateY(0);
   transform: translateY(0);
   display: flex;
   gap: 0.25rem;
@@ -329,16 +323,19 @@
 
 .piawoodImg.hidden {
   opacity: 0;
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 
 .piaWoodEstatisticas {
+  -webkit-transform: translateY(100%);
   transform: translateY(100%);
   opacity: 0;
   height: 0;
 }
 
 .piaWoodEstatisticas.visible {
+  -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
   height: 100%;
@@ -353,7 +350,7 @@
 }
 
 .piawoodInfo {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -366,11 +363,13 @@
 
 .hidden {
   opacity: 0;
+  -webkit-transform: translateY(100%);
   transform: translateY(100%);
 }
 
 .visible {
   opacity: 0;
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -438,7 +437,7 @@
 .curtainContainer {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -448,11 +447,13 @@
   width: 50%;
   height: 100%;
   z-index: 9999;
+  -webkit-transition: transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
 }
 
 .leftCurtain {
   left: 0;
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   background: url("/src/Assets/curtain_left.png") no-repeat;
   background-size: 100% 100%;
@@ -460,6 +461,7 @@
 
 .rightCurtain {
   right: 0;
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   background: url("/src/Assets/curtain_right.png") no-repeat;
   background-size: 100% 100%;
@@ -478,18 +480,21 @@
   background-color: var(--color-orange-accent);
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
 }
 
 .curtainContent.visible {
   opacity: 1;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .casaAmarelaImg,
   .casaAmarelaEstatisticas,
   .piawoodImg,
   .piaWoodEstatisticas {
     transition: none;
+    -webkit-transition: none;
+    -webkit-transform: none;
     transform: none;
     opacity: 1;
     position: static;
@@ -521,6 +526,10 @@
     display: none;
   }
 
+  .section {
+    height: 100dvh;
+  }
+
   .casaAmarela img {
     border-radius: 1rem;
     margin-top: 2rem;
@@ -530,6 +539,7 @@
     align-items: center;
     height: 100%;
     padding: 0;
+    gap: 1rem;
   }
 
   .hospitalityInfo {
@@ -540,8 +550,13 @@
   .casaAmarelaSection {
     flex-direction: column-reverse;
     padding: 1rem 3rem;
-    gap: 1rem;
-    justify-content: space-evenly;
+    gap: 0.75rem;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .casaAmarelaSection::before,
+  .casaAmarelaSection::after {
+    content: "";
   }
   .casaAmarelaBarrinha {
     position: absolute;
@@ -570,6 +585,7 @@
     width: 100%;
     height: min-content;
     left: 0;
+    -webkit-transform: none;
     transform: none;
   }
   .casaAmarelaEstatisticas svg {
@@ -594,7 +610,7 @@
   }
 
   .housesMap {
-    background: url("/src/Assets/hospitality_map_mobile.svg") center no-repeat;
+    background: none;
     padding: 0.25rem 0.5rem;
     border-radius: 1.5rem;
   }
@@ -671,7 +687,262 @@
   .piaWoodEstatisticas {
     width: 100%;
     height: 100%;
+    padding: 3rem 3rem;
+    position: relative;
+    left: 0;
+  }
+
+  .piaWoodEstatisticas img {
+    height: 100%;
+    left: 0;
+    padding: 1rem;
+  }
+
+  .eventsSpace {
+    /* display: none; */
+    height: 100%;
+  }
+
+  .events {
+    display: flex;
+    padding: 3rem 1rem;
+    max-width: 100%;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .eventsImg {
+    display: none;
+  }
+
+  .eventsImgMobile {
+    display: block;
+    max-width: 100%;
+    right: 5%;
+    bottom: 0;
+  }
+
+  .yellowFilme {
+    flex-direction: column-reverse;
+    background-color: var(--color-orange-accent);
+    background-image: none;
+  }
+
+  .yellowFilmeImg svg {
+    width: 100%;
+  }
+
+  .videoBanner {
+    flex-direction: column;
+  }
+
+  .curtainContent {
+    flex-direction: column-reverse;
+    padding: 1rem 1rem;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .casaAmarelaImg,
+  .casaAmarelaEstatisticas,
+  .piawoodImg,
+  .piaWoodEstatisticas {
+    transition: none;
+    -webkit-transition: none;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+    position: static;
+  }
+  .casaAmarela {
+    flex-direction: column-reverse;
     padding: 0rem 3rem;
+    gap: 2rem;
+  }
+
+  .container {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .container {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .container img {
+    width: 100%;
+    /* height: auto; */
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .section {
+    height: 100dvh;
+  }
+
+  .casaAmarela img {
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
+
+  .casaAmarelaInfo {
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .hospitalityInfo {
+    align-items: center;
+    height: auto;
+  }
+
+  .casaAmarelaSection {
+    flex-direction: column-reverse;
+    padding: 1rem 3rem;
+    gap: 0.75rem;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .casaAmarelaSection::before,
+  .casaAmarelaSection::after {
+    content: "";
+  }
+  .casaAmarelaBarrinha {
+    position: absolute;
+    top: -5.5rem;
+    left: -6rem;
+    width: 25rem;
+  }
+  .casaAmarelaImg img {
+    border-radius: 2rem;
+  }
+  .casaAmarelaDiv {
+    position: relative;
+  }
+  .casaAmarelaInfoContainer {
+    justify-content: center;
+    height: min-content;
+    padding: 0rem 3rem;
+  }
+  .casaAmarelaImg {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+  }
+  .casaAmarelaEstatisticas {
+    width: 70%;
+    height: min-content;
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .casaAmarelaEstatisticas svg {
+    width: 100%;
+    height: min-content;
+  }
+
+  .hospitality {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 3rem;
+  }
+  .hospitalityTitle {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hospitalityRoom svg {
+    max-width: 100%;
+    height: min-content;
+    padding: 2rem 0rem;
+  }
+
+  .housesMap {
+    background: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .casaBaete,
+  .casaBruxa,
+  .casaCaju,
+  .casaCamua,
+  .casaDecker,
+  .casaRio,
+  .casaSal {
+    display: none;
+  }
+
+  .cardReserva {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardReservaMobile {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .cardButtons {
+    display: block;
+  }
+
+  .piawoodSection {
+    flex-direction: column-reverse;
+    padding: 3rem;
+  }
+
+  .piawoodInfoContainer {
+    justify-content: center;
+    height: min-content;
+    gap: 1rem;
+  }
+
+  .piawoodInfo {
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .piawood {
+    flex-direction: column-reverse;
+    padding: 1rem 3rem;
+  }
+
+  .piawoodImg svg {
+    height: auto;
+    width: 100%;
+  }
+
+  .piawoodImg {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  .piaWoodEstatisticas {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 3rem;
     position: relative;
     left: 0;
   }

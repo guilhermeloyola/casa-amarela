@@ -121,6 +121,7 @@
   -moz-border-radius: 9rem / 4.5rem;
   -webkit-border-radius: 9rem / 4.5rem;
   border-radius: 9rem / 4.5rem;
+  -webkit-transform: rotate(-30deg);
   transform: rotate(-30deg);
   overflow: hidden;
   position: relative;
@@ -128,6 +129,7 @@
 }
 
 .passeioImg iframe {
+  -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
   position: absolute;
   top: -30%;
@@ -336,6 +338,7 @@ iframe {
     -webkit-border-radius: 6.5rem / 3.25rem;
     border-radius: 6.5rem / 3.25rem;
     transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
   }
   .passeioInfo {
     padding-left: 0;

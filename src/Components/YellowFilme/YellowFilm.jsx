@@ -168,9 +168,9 @@ const YellowFilme = () => {
           height="900"
           src="https://www.youtube.com/embed/UMWetbnkElM?si=G7cYQr-TY6mkxwXK"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
       </div>
