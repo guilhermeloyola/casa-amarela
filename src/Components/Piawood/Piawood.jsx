@@ -24,12 +24,12 @@ const Piawood = () => {
       <div className={`${styles.container} ${styles.piawood}`}>
         <img
           className={styles.desktop}
-          src="src/Assets/piawood_banner.png"
+          src="src/Assets/piawood_03.jpg"
           alt="Piawood Banner"
         />
         <img
           className={styles.mobile}
-          src="src/Assets/piawood_banner_mobile.png"
+          src="src/Assets/piawood_03.jpg"
           alt="Piawood Banner"
         />
       </div>

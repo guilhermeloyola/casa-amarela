@@ -151,13 +151,13 @@ const HospitalityHospedagem = () => {
       ></Header>
       <div className={styles.container}>
         <img
-          className={styles.desktop}
-          src="src/Assets/hospitality_banner.png"
+          className={styles.desktop}  style={{ margin: '5px', borderRadius: '18px' }}
+          src="src/Assets/hospitality_03.jpg"
           alt="Hospitality Banner"
         />
         <img
-          className={styles.mobile}
-          src="src/Assets/hospitality_banner_mobile.png"
+          className={styles.mobile} style={{ borderRadius: '18px' }}
+          src="src/Assets/hospitality_03_mobile.jpg"
           alt="Hospitality Banner"
         />
       </div>

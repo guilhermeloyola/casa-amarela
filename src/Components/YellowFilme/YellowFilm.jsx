@@ -25,12 +25,12 @@ const YellowFilme = () => {
       <div className={styles.yellowFilme}>
         <img
           className={styles.desktop}
-          src="src/Assets/yellow_filme_banner.png"
+          src="src/Assets/YellowFilm_03.jpg" style={{width:'77%', borderRadius:'14px'}}
           alt="Banner Yellow Film"
         />
         <img
           className={styles.mobile}
-          src="src/Assets/yellow_filme_banner_mobile.png"
+          src="src/Assets/YellowFilm_03.jpg"
           alt="Banner Yellow Film"
         />
       </div>
@@ -65,7 +65,7 @@ const YellowFilme = () => {
           </div>
 
           <TextContent
-            content="A Yellow Film é uma produtora audiovisual que promove a Casa Amarela e o hub cultural Piawood, criando conteúdos para marketing e eventos. Também oferece serviços especializados para marcas que buscam produções no Piauí, destacando o cenário e a cultura local. Com foco na essência piauiense, entrega resultados criativos e autênticos."
+            content="A Yellow Filme é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Filme oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções"
             color="brown"
             type="medium"
             maxCharacters="maxCharacters40"
