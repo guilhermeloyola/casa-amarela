@@ -232,14 +232,14 @@ const Home = () => {
         onScroll={handleCasaAmarelaScroll}
       >
         <div
-          className={`${styles.casaAmarelaEstatisticas} ${
+          className={`${styles.desktop} ${styles.casaAmarelaEstatisticas} ${
             isCasaAmarelaEstatisticasVisible ? styles.visible : ""
           }`}
         >
           <CasaAmarelaEstatistica />
         </div>
         <div
-          className={`${styles.casaAmarelaImg} ${
+          className={`${styles.casaAmarelaImg} ${styles.desktop} ${
             isCasaAmarelaEstatisticasVisible ? styles.hidden : ""
           }`}
         >
@@ -255,7 +255,24 @@ const Home = () => {
             {/* <Carousel /> */}
           </div>
         </div>
-
+        <div
+          className={`${styles.mobile} ${styles.casaAmarelaEstatisticasMobile}`}
+        >
+          <CasaAmarelaEstatistica />
+        </div>
+        <div className={`${styles.casaAmarelaImgMobile} ${styles.mobile}`}>
+          <div className={styles.casaAmarelaDiv}>
+            <ImageGallery
+              items={images}
+              showThumbnails={false}
+              showPlayButton={false}
+              showFullscreenButton={false}
+              autoPlay={false}
+            />
+            <Barrinha className={styles.casaAmarelaBarrinha} />
+            {/* <Carousel /> */}
+          </div>
+        </div>
         <div className={styles.casaAmarelaInfoContainer}>
           <div className={styles.casaAmarelaInfo}>
             <Title label="CASA AMARELA" type="yellow" />
