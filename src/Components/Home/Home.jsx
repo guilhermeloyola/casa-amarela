@@ -236,6 +236,33 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleTouchStart = (event) => {
+      setStartY(event.touches[0].clientY);
+    };
+    const handleTouchEnd = (event) => {
+      const endY = event.changedTouches[0].clientY;
+      const deltaY = startY - endY;
+      const swipeThreshold = 50;
+      if (deltaY > swipeThreshold) {
+        if (currentSectionIndex < sectionRefs.current.length - 1) {
+          setCurrentSectionIndex(currentSectionIndex + 1);
+          scrollToSection(currentSectionIndex + 1);
+        }
+      } else if (deltaY < -swipeThreshold) {
+        if (currentSectionIndex > 0) {
+          setCurrentSectionIndex(currentSectionIndex - 1);
+          scrollToSection(currentSectionIndex - 1);
+        }
+      }
+    };
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchend", handleTouchEnd);
+    return () => {
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [startY, currentSectionIndex]);
   return (
     <div onWheel={handleScroll} className={`${styles.home} container`}>
       <Header
