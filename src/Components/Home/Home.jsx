@@ -108,6 +108,7 @@ const Home = () => {
   ] = useState(false);
   const [isPiawoodEstatisticasVisible, setIsPiawoodEstatisticasVisible] =
     useState(false);
+  const [startY, setStartY] = useState(null);
 
   const handleScroll = (event) => {
     const currentSection = sectionRefs.current[currentSectionIndex];
@@ -229,14 +230,6 @@ const Home = () => {
       observer.observe(yellowFilmeSection);
     }
 
-    return () => {
-      if (yellowFilmeSection) {
-        observer.unobserve(yellowFilmeSection);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
     const handleTouchStart = (event) => {
       setStartY(event.touches[0].clientY);
     };
@@ -258,11 +251,17 @@ const Home = () => {
     };
     document.addEventListener("touchstart", handleTouchStart);
     document.addEventListener("touchend", handleTouchEnd);
+
     return () => {
+      if (yellowFilmeSection) {
+        observer.unobserve(yellowFilmeSection);
+      }
+
       document.removeEventListener("touchstart", handleTouchStart);
       document.removeEventListener("touchend", handleTouchEnd);
     };
   }, [startY, currentSectionIndex]);
+
   return (
     <div onWheel={handleScroll} className={`${styles.home} container`}>
       <Header
