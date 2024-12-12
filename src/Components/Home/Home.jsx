@@ -291,7 +291,7 @@ const Home = () => {
             <TextContent
               type="black"
               content="A Casa Amarela é um projeto que conecta turismo, comunidade e sustentabilidade em Barrinha, PI. Nosso objetivo é contribuir para o desenvolvimento da região, promovendo educação, cultura e iniciativas que impulsionem a economia local de forma colaborativa e consciente."
-              maxCharacters="maxCharacters30"
+              maxCharacters="maxCharacters40"
             />
           </div>
         </div>

@@ -85,6 +85,7 @@
     overflow: hidden;
   }
   .maxCharacters30 {
+    max-width: 40ch;
     text-align: center;
   }
   .maxCharacters40 {
