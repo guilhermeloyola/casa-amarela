@@ -161,6 +161,40 @@ const Home = () => {
   };
 
   useEffect(() => {
+    const handleTouchStart = (event) => {
+      const startY = event.touches[0].clientY;
+      setStartY(startY);
+    };
+    const handleTouchMove = (event) => {
+      const endY = event.changedTouches[0].clientY;
+      const deltaY = startY - endY;
+      const swipeThreshold = 80;
+      if (deltaY > swipeThreshold) {
+        if (currentSectionIndex < sectionRefs.current.length - 1) {
+          setCurrentSectionIndex(currentSectionIndex + 1);
+          scrollToSection(currentSectionIndex + 1);
+        }
+      } else if (deltaY < -swipeThreshold) {
+        if (currentSectionIndex > 0) {
+          setCurrentSectionIndex(currentSectionIndex - 1);
+          scrollToSection(currentSectionIndex - 1);
+        }
+      }
+    };
+    const handleTouchEnd = () => {
+      setStartY(null);
+    };
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchmove", handleTouchMove);
+    document.addEventListener("touchend", handleTouchEnd);
+    return () => {
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [currentSectionIndex]);
+
+  useEffect(() => {
     const yellowFilmeSection = document.querySelector(`.${styles.yellowFilme}`);
     const leftCurtain = document.querySelector(`.${styles.leftCurtain}`);
     const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
