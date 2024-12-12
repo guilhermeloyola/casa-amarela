@@ -712,6 +712,10 @@
     padding-top: 1rem;
   }
 
+  .eventsSection::before {
+    content: "";
+  }
+
   .eventsSpace {
     display: block;
     height: 50dvh;
