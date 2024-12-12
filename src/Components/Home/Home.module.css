@@ -236,7 +236,7 @@
   left: 10%;
   width: 45%;
   height: 100%;
-  -webkit-transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  -webkit-transition: none;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   display: flex;
   align-items: center;
