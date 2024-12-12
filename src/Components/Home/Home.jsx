@@ -273,7 +273,19 @@ const Home = () => {
             {/* <Carousel /> */}
           </div>
         </div>
-        <div className={styles.casaAmarelaInfoContainer}>
+        <div className={`${styles.casaAmarelaInfoContainer} ${styles.desktop}`}>
+          <div className={styles.casaAmarelaInfo}>
+            <Title label="CASA AMARELA" type="yellow" />
+            <TextContent
+              type="black"
+              content="A Casa Amarela é um projeto que conecta turismo, comunidade e sustentabilidade em Barrinha, PI. Nosso objetivo é contribuir para o desenvolvimento da região, promovendo educação, cultura e iniciativas que impulsionem a economia local de forma colaborativa e consciente."
+              maxCharacters="maxCharacters30"
+            />
+          </div>
+        </div>
+        <div
+          className={`${styles.casaAmarelaInfoContainerMobile} ${styles.mobile}`}
+        >
           <div className={styles.casaAmarelaInfo}>
             <Title label="CASA AMARELA" type="yellow" />
             <TextContent
