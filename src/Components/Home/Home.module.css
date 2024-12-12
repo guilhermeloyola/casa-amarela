@@ -6,13 +6,14 @@
 }
 
 .section {
+  max-height: 100%;
   height: 100dvh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: height 1s ease-in-out, opacity 1s ease-in-out;
-  -webkit-transition: height 1s ease-in-out, opacity 1s ease-in-out;
+  -webkit-transition: none;
   overflow-y: auto;
 }
 
@@ -302,8 +303,7 @@
   left: 10%;
   width: 40%;
   height: 100%;
-  -webkit-transition: height 1s ease-in-out, transform 1s ease-in-out,
-    opacity 1s ease-in-out;
+  -webkit-transition: none;
   transition: height 1s ease-in-out, transform 1s ease-in-out,
     opacity 1s ease-in-out;
   display: flex;
