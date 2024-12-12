@@ -31,7 +31,7 @@ const YellowFilme = () => {
         <img
           className={styles.mobile}
           src="src/Assets/YellowFilm_03.jpg"
-          alt="Banner Yellow Film"
+          alt="Banner Yellow Film" style={{marginTop: '87px', borderRadius:'7px'}}
         />
       </div>
       <div className={styles.yellowFilme}>
@@ -43,7 +43,7 @@ const YellowFilme = () => {
         <img
           className={styles.mobile}
           src="src/Assets/video_360_mobile.png"
-          alt="Banner Video 360"
+          alt="Banner Video 360"          
         />
       </div>
 

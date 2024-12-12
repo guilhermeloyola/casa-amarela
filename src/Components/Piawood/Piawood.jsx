@@ -31,6 +31,7 @@ const Piawood = () => {
           className={styles.mobile}
           src="src/Assets/piawood_03.jpg"
           alt="Piawood Banner"
+          style={{marginTop:'60px'}}
         />
       </div>
       <div className={styles.piawoodInfo}>
