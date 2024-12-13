@@ -25,16 +25,18 @@ const YellowFilme = () => {
       <div className={styles.yellowFilme}>
         <img
           className={styles.desktop}
-          src="src/Assets/YellowFilm_03.jpg" style={{width:'77%', borderRadius:'14px'}}
+          src="src/Assets/YellowFilm_03.jpg"
+          style={{ width: "100%", borderRadius: "1rem" }}
           alt="Banner Yellow Film"
         />
         <img
           className={styles.mobile}
           src="src/Assets/YellowFilm_03.jpg"
-          alt="Banner Yellow Film" style={{marginTop: '87px', borderRadius:'7px'}}
+          alt="Banner Yellow Film"
+          style={{ marginTop: "87px", borderRadius: "7px" }}
         />
       </div>
-      <div className={styles.yellowFilme}>
+      <div className={styles.yellowFilmeBanner2}>
         <img
           className={styles.desktop}
           src="src/Assets/video_360.png"
@@ -43,7 +45,7 @@ const YellowFilme = () => {
         <img
           className={styles.mobile}
           src="src/Assets/video_360_mobile.png"
-          alt="Banner Video 360"          
+          alt="Banner Video 360"
         />
       </div>
 
