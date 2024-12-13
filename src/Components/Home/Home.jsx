@@ -276,8 +276,7 @@ const Home = () => {
         className={`${styles.container} ${styles.section}`}
       >
         <img
-          className={styles.desktop}
-          src="src/Assets/home_1.png"
+          src="src/Assets/home_1.png" className={styles.desktop} 
           alt="Quarto"
         />
         <img
@@ -296,7 +295,7 @@ const Home = () => {
             isCasaAmarelaEstatisticasVisible ? styles.visible : ""
           }`}
         >
-          <CasaAmarelaEstatistica />
+          <img src="src/Assets/destaques_home.png" style={{ height: '50%' }}/>
         </div>
         <div
           className={`${styles.casaAmarelaImg} ${styles.desktop} ${
@@ -577,7 +576,7 @@ const Home = () => {
               </div>
               <TextContent
                 type="blackBrown"
-                content="A Yellow Film é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Film valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
+                content="A Yellow Filme é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Filme oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções."
                 maxCharacters="maxCharacters30"
               />
               <Hyperlink

@@ -42,19 +42,6 @@ const Informacoes = () => {
             </div>
             <div className={styles.tituloIcon}>
               <ExplamationPoint />
-              Calendário das hospedagens
-            </div>
-            <ol className={styles.duvidasList}>
-              <li>Janeiro: Fechado para manutenção</li>
-              <li>
-                Fevereiro a maio: Fechado (período de chuvas) ; com
-                possibilidade de reservas futuras
-              </li>
-              <li>Junho: Fechado para manutenção</li>
-              <li>Julho a dezembro: Aberto para reservas</li>
-            </ol>
-            <div className={styles.tituloIcon}>
-              <ExplamationPoint />
               Calendário das Atividades
             </div>
             <ol className={styles.duvidasList}>
@@ -161,14 +148,6 @@ const Informacoes = () => {
               whatsapp
             </div>
             <div className={styles.separator}></div>
-            <div>
-              <Label
-                label="Piawood"
-                type="blue"
-                border="squareRound"
-                icon={LogoBlue}
-              />
-            </div>
           </div>
         </div>
       </div>
