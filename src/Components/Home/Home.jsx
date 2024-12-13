@@ -276,7 +276,8 @@ const Home = () => {
         className={`${styles.container} ${styles.section}`}
       >
         <img
-          src="src/Assets/home_1.png" className={styles.desktop} 
+          src="src/Assets/home_1.png"
+          className={styles.desktop}
           alt="Quarto"
         />
         <img
@@ -295,7 +296,7 @@ const Home = () => {
             isCasaAmarelaEstatisticasVisible ? styles.visible : ""
           }`}
         >
-          <img src="src/Assets/destaques_home.png" style={{ height: '50%' }}/>
+          <img src="src/Assets/destaques_home.png" style={{ height: "50%" }} />
         </div>
         <div
           className={`${styles.casaAmarelaImg} ${styles.desktop} ${
@@ -603,8 +604,8 @@ const Home = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
-        <Footer labelColor="yellowWhite" />
       </section>
+      <Footer labelColor="yellowWhite" />
     </div>
   );
 };
