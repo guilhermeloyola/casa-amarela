@@ -83,41 +83,27 @@ const YellowFilme = () => {
       <div className={styles.yellowFilmeMissao}>
         <div className={styles.yellowFilmeMissaoItem}>
           <div>
-            <House />
+            <LogoLabelOrange />
           </div>
           <div>
-            Missão
+            Pra dentro
             <div>
-              A nossa missão e propósito acima de tudo é:  enaltecer os artistas
-              locais que são a população e moradores envolvidos na Barrinha e
-              região.
+              A Yellow Filme cria todo o conteúdo audiovisual para promoção,
+              comunicação, edição e direção dos conteúdos para o hub cultural
+              Piawood.
             </div>
           </div>
         </div>
         <div className={styles.yellowFilmeMissaoItem}>
           <div>
-            <Vision />
+            <LogoLabelOrange />
           </div>
           <div>
-            Visão
+            Pra fora
             <div>
-              Ter como colaboradores empresas e marcas que entendam e acreditem
-              no nosso lifestyle. E assim traga progresso + valorização da
-              comunidade barrinhense e região. 
-            </div>
-          </div>
-        </div>
-        <div className={styles.yellowFilmeMissaoItem}>
-          <div>
-            <Values />
-          </div>
-          <div>
-            Valores
-            <div>
-              Respeitar e enaltecer a essência do vilarejo Barrinha,PI. Sem
-              ferir costumes, crenças e princípios. Respeitar e enaltecer a
-              essência de cada participante do projeto. Tendo sempre como
-              prioridade a verdade e a transparência.
+              Yellow filme também oferece seus serviços e expertise local e
+              regional para marcas e empresas que desejam realizar coproduções
+              audiovisuais dentro e fora do Piauí.
             </div>
           </div>
         </div>
