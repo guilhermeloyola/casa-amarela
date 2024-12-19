@@ -302,7 +302,7 @@
   position: relative;
   width: calc(100% / 1.15);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 

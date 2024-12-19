@@ -291,6 +291,7 @@ const Home = () => {
         className={`${styles.container} ${styles.section} ${styles.casaAmarelaSection}`}
         onScroll={handleCasaAmarelaScroll}
       >
+        <div style={{ height: "50%", width: "100%" }}></div>
         <div
           className={`${styles.desktop} ${styles.casaAmarelaEstatisticas} ${
             isCasaAmarelaEstatisticasVisible ? styles.visible : ""
