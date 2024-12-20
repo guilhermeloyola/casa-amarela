@@ -393,8 +393,13 @@ const Home = () => {
         className={`${styles.parallax} ${styles.houses} ${styles.section}`}
       >
         <img
-          className={styles.housesMap}
+          className={`${styles.housesMap} ${styles.desktop}`}
           src="src/Assets/hospitality_map.png"
+          alt="Mapa de estadias"
+        />
+        <img
+          className={styles.mobile}
+          src="src/Assets/houses_mobile.jpeg"
           alt="Mapa de estadias"
         />
         <div className={styles.casaRio}>
