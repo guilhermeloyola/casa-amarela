@@ -411,7 +411,7 @@
 .eventsImg {
   position: absolute;
   bottom: -1%;
-  right: calc(100% / 6.2);
+  right: 6rem;
 }
 
 .eventsImgMobile {
@@ -538,7 +538,7 @@
   }
 
   .desktop {
-    display: none;
+    display: none !important;
   }
 
   .casaAmarela img {
@@ -755,7 +755,7 @@
 
   .events {
     display: flex;
-    padding: 3rem 1rem;
+    padding: 3rem 3rem;
     max-width: 100%;
     align-items: flex-start;
   }
@@ -767,7 +767,7 @@
   .eventsImgMobile {
     display: block;
     max-width: 100%;
-    right: 5%;
+    right: 3rem;
     bottom: 0;
   }
 
