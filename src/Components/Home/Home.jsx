@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 import styles from "./Home.module.css";
 import Header from "../Utils/Header";
 import Divider from "../Utils/Divider";
@@ -161,6 +162,23 @@ const Home = () => {
     sectionRefs.current[index].scrollIntoView({ behavior: "smooth" });
   };
 
+  const swipeHandlers = useSwipeable({
+    onSwipedUp: () => {
+      if (currentSectionIndex < sectionRefs.current.length - 1) {
+        setCurrentSectionIndex(currentSectionIndex + 1);
+        scrollToSection(currentSectionIndex + 1);
+      }
+    },
+    onSwipedDown: () => {
+      if (currentSectionIndex > 0) {
+        setCurrentSectionIndex(currentSectionIndex - 1);
+        scrollToSection(currentSectionIndex - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   useEffect(() => {
     const handleTouchStart = (event) => {
       const startY = event.touches[0].clientY;
@@ -263,7 +281,11 @@ const Home = () => {
   }, [startY, currentSectionIndex]);
 
   return (
-    <div onWheel={handleScroll} className={`${styles.home} container`}>
+    <div
+      {...swipeHandlers}
+      onWheel={handleScroll}
+      className={`${styles.home} container`}
+    >
       <Header
         buttonColor="yellow"
         className={styles.header}
