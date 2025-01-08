@@ -363,7 +363,32 @@ const Home = () => {
         id="hospitality"
         className={`${styles.parallax} ${styles.hospitality} ${styles.section}`}
       >
-        <div className={`${styles.hospitalityDiv} ${styles.mobile}`}></div>
+        <div className={`${styles.hospitalityDiv} ${styles.mobile}`}>
+          <div className={`${styles.hospitalityInfo}`}>
+            <div className={styles.hospitalityTitle}>
+              <Label
+                label="Hospitality"
+                type="redReverse"
+                border="squareRound"
+                icon={LogoLabelRed}
+              />
+              <Title label="Live and experience" type="redAccent3" />
+            </div>
+            <TextContent
+              type="redAccent2"
+              content="A Casa Amarela oferece casas na costa do Piauí, criando experiências aconchegantes e autênticas. Valorizamos o turismo sustentável e comunitário, com atividades personalizadas para cada visitante. Aqui, você pode aproveitar paisagens incríveis, vivências únicas e se conectar de verdade com a cultura e as pessoas da região."
+              maxCharacters="maxCharacters30"
+            />
+            <Hyperlink
+              color="redAccent3"
+              label="Saiba mais sobre nossas hospedagens"
+              href="/Hospitality"
+            />
+          </div>
+          <div className={styles.hospitalityRoom}>
+            <HospitalityRoom />
+          </div>
+        </div>
         <div className={`${styles.hospitalityInfo} ${styles.desktop}`}>
           <div className={styles.hospitalityTitle}>
             <Label

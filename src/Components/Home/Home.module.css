@@ -831,7 +831,7 @@
   }
 
   .desktop {
-    display: none;
+    display: none !important;
   }
 
   .casaAmarela img {
@@ -983,6 +983,7 @@
     justify-content: center;
     height: min-content;
     gap: 1rem;
+    width: 100%;
   }
 
   .piawoodInfo {
