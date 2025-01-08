@@ -291,7 +291,10 @@ const Home = () => {
         className={`${styles.container} ${styles.section} ${styles.casaAmarelaSection}`}
         onScroll={handleCasaAmarelaScroll}
       >
-        <div style={{ height: "50%", width: "100%" }}></div>
+        <div
+          className={styles.desktop}
+          style={{ height: "50%", width: "100%" }}
+        ></div>
         <div
           className={`${styles.desktop} ${styles.casaAmarelaEstatisticas} ${
             isCasaAmarelaEstatisticasVisible ? styles.visible : ""
@@ -322,17 +325,15 @@ const Home = () => {
           <CasaAmarelaEstatistica />
         </div>
         <div className={`${styles.casaAmarelaImgMobile} ${styles.mobile}`}>
-          <div className={styles.casaAmarelaDiv}>
-            <ImageGallery
-              items={images}
-              showThumbnails={false}
-              showPlayButton={false}
-              showFullscreenButton={false}
-              autoPlay={false}
-            />
-            <Barrinha className={styles.casaAmarelaBarrinha} />
-            {/* <Carousel /> */}
-          </div>
+          <ImageGallery
+            items={images}
+            showThumbnails={false}
+            showPlayButton={false}
+            showFullscreenButton={false}
+            autoPlay={false}
+          />
+          <Barrinha className={styles.casaAmarelaBarrinha} />
+          {/* <Carousel /> */}
         </div>
         <div className={`${styles.casaAmarelaInfoContainer} ${styles.desktop}`}>
           <div className={styles.casaAmarelaInfo}>
@@ -362,7 +363,8 @@ const Home = () => {
         id="hospitality"
         className={`${styles.parallax} ${styles.hospitality} ${styles.section}`}
       >
-        <div className={styles.hospitalityInfo}>
+        <div className={`${styles.hospitalityDiv} ${styles.mobile}`}></div>
+        <div className={`${styles.hospitalityInfo} ${styles.desktop}`}>
           <div className={styles.hospitalityTitle}>
             <Label
               label="Hospitality"
@@ -383,7 +385,7 @@ const Home = () => {
             href="/Hospitality"
           />
         </div>
-        <div className={styles.hospitalityRoom}>
+        <div className={styles.desktop}>
           <HospitalityRoom />
         </div>
       </section>
@@ -496,6 +498,10 @@ const Home = () => {
         onScroll={handlePiawoodScroll}
       >
         <div
+          className={styles.desktop}
+          style={{ height: "100%", width: "50%" }}
+        ></div>
+        <div
           className={`${styles.desktop} ${styles.piaWoodEstatisticas} ${
             isPiawoodEstatisticasVisible ? styles.visible : ""
           }`}
@@ -505,15 +511,42 @@ const Home = () => {
             alt="Estatísticas Piawood"
           />
         </div>
+        <div className={`${styles.mobile} ${styles.piawoodDiv}`}>
+          <div
+            className={`${styles.piawoodImg} ${
+              isPiawoodEstatisticasVisible ? styles.hidden : ""
+            }`}
+          >
+            <PalmTrees />
+          </div>
+
+          <div className={styles.piawoodInfoContainer}>
+            <div className={styles.piawoodInfo}>
+              <div className={styles.hospitalityTitle}>
+                <Label
+                  label="Piawood"
+                  type="blue"
+                  icon={LogoLabelGreen}
+                  border="squareRound"
+                />
+              </div>
+              <TextContent
+                type="black"
+                content="Piawood é o hub cultural da Casa Amarela, dedicado ao fomento da cultura e talentos locais na região de Barrinha, PI. Atuando como curador e plataforma de crescimento, Piawood promove eventos que integram música, artes visuais, gastronomia e esporte, gerando impacto na cena cultural da região. Além disso, a produtora Yellow Film cria conteúdos audiovisuais que documentam e divulgam essas experiências, conectando a riqueza cultural local a um público mais amplo."
+                maxCharacters="maxCharacters30"
+              />
+            </div>
+          </div>
+        </div>
         <div
-          className={`${styles.piawoodImg} ${
+          className={`${styles.piawoodImg} ${styles.desktop} ${
             isPiawoodEstatisticasVisible ? styles.hidden : ""
           }`}
         >
           <PalmTrees />
         </div>
 
-        <div className={styles.piawoodInfoContainer}>
+        <div className={`${styles.desktop} ${styles.piawoodInfoContainer}`}>
           <div className={styles.piawoodInfo}>
             <div className={styles.hospitalityTitle}>
               <Label

@@ -120,7 +120,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
   .maxCharacters20 {
     max-width: 30ch;
     display: -webkit-box;
@@ -129,7 +129,7 @@
     overflow: hidden;
   }
   .textContent {
-    font-size: 1rem;
+    font-size: auto;
     font-weight: 400;
   }
   .maxCharacters30 {
@@ -139,6 +139,9 @@
   .maxCharacters40 {
     max-width: 50ch;
     text-align: center;
+  }
+  .textContent {
+    font-size: 1rem;
   }
 }
 
