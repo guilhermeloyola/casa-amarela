@@ -110,6 +110,7 @@ const Home = () => {
   const [isPiawoodEstatisticasVisible, setIsPiawoodEstatisticasVisible] =
     useState(false);
   const [startY, setStartY] = useState(null);
+  const [casaAmarelaSwipeStep, setCasaAmarelaSwipeStep] = useState(0);
 
   const handleScroll = (event) => {
     const currentSection = sectionRefs.current[currentSectionIndex];
@@ -142,11 +143,7 @@ const Home = () => {
 
   const handleCasaAmarelaScroll = (event) => {
     const scrollTop = event.target.scrollTop;
-    if (scrollTop > 2) {
-      setIsCasaAmarelaEstatisticasVisible(true);
-    } else if (scrollTop === 0) {
-      setIsCasaAmarelaEstatisticasVisible(false);
-    }
+    setIsCasaAmarelaEstatisticasVisible(scrollTop > 2);
   };
 
   const handlePiawoodScroll = (event) => {
@@ -162,23 +159,47 @@ const Home = () => {
     sectionRefs.current[index].scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToCasaAmarelaStep = (step) => {
+    if (step === 0) {
+      scrollToSection(currentSectionIndex);
+    } else if (step === 1) {
+      sectionRefs.current[currentSectionIndex]
+        .querySelector(`.${styles.casaAmarelaImg}`)
+        .scrollIntoView({ behavior: "smooth" });
+    } else if (step === 2) {
+      sectionRefs.current[currentSectionIndex]
+        .querySelector(`.${styles.casaAmarelaEstatisticas}`)
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const swipeHandlers = useSwipeable({
-    onSwipedUp: () => {
-      if (currentSectionIndex < sectionRefs.current.length - 1) {
-        setCurrentSectionIndex(currentSectionIndex + 1);
-        scrollToSection(currentSectionIndex + 1);
-      }
-    },
-    onSwipedDown: () => {
-      if (currentSectionIndex > 0) {
-        setCurrentSectionIndex(currentSectionIndex - 1);
-        scrollToSection(currentSectionIndex - 1);
+    onSwiped: (eventData) => {
+      const { dir } = eventData;
+      if (currentSectionIndex === 1) {
+        if (dir === "Up" && casaAmarelaSwipeStep < 2) {
+          setCasaAmarelaSwipeStep(casaAmarelaSwipeStep + 1);
+          scrollToCasaAmarelaStep(casaAmarelaSwipeStep + 1);
+        } else if (dir === "Down" && casaAmarelaSwipeStep > 0) {
+          setCasaAmarelaSwipeStep(casaAmarelaSwipeStep - 1);
+          scrollToCasaAmarelaStep(casaAmarelaSwipeStep - 1);
+        }
+      } else {
+        if (
+          dir === "Up" &&
+          currentSectionIndex < sectionRefs.current.length - 1
+        ) {
+          setCurrentSectionIndex(currentSectionIndex + 1);
+          scrollToSection(currentSectionIndex + 1);
+        } else if (dir === "Down" && currentSectionIndex > 0) {
+          setCurrentSectionIndex(currentSectionIndex - 1);
+          scrollToSection(currentSectionIndex - 1);
+        }
       }
     },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
-
   useEffect(() => {
     const handleTouchStart = (event) => {
       const startY = event.touches[0].clientY;

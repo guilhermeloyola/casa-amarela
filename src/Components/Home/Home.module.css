@@ -12,7 +12,6 @@
   align-items: center;
   justify-content: center;
   transition: height 1s ease-in-out, opacity 1s ease-in-out;
-  overflow-y: auto;
 }
 
 .section.collapsing {
