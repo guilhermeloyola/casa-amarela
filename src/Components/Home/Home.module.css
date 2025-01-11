@@ -172,9 +172,13 @@ body {
 }
 
 .cardReserva {
+  height: 100%;
   position: absolute;
-  bottom: 20%;
+  bottom: 0;
   right: 5%;
+  padding: 1rem;
+  align-items: center;
+  display: flex;
 }
 
 .scrollText {
