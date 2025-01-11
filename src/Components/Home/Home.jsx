@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import styles from "./home.module.css";
+import styles from "./Home.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 // ASSETS
