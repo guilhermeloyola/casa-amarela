@@ -136,7 +136,7 @@ const Home = () => {
           }
         });
       },
-      { threshold: 0.2 },
+      { threshold: 0.1 },
     );
     if (yellowFilmeSection) {
       observer.observe(yellowFilmeSection);
@@ -458,11 +458,11 @@ const Home = () => {
         <ParallaxLayer offset={10} speed={1.5}>
           <Footer
             labelColor="yellowWhite"
-            style={{ display: "flex", width: "100%", width: "100%" }}
+            style={{ display: "flex", width: "100%" }}
           />
         </ParallaxLayer>
       </Parallax>
-      <Parallax pages={10} className={styles.mobile}>
+      <Parallax ref={parallaxRef} pages={10} className={styles.mobile}>
         <ParallaxLayer
           offset={0}
           speed={0.5}
@@ -510,7 +510,7 @@ const Home = () => {
           speed={1.5}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
-          <div classList={styles.casaAmarelaEstatisticas}>
+          <div className={styles.casaAmarelaEstatisticas}>
             <CasaAmarelaEstatistica />
           </div>
         </ParallaxLayer>
@@ -669,7 +669,7 @@ const Home = () => {
         <ParallaxLayer offset={9} speed={1.5}>
           <Footer
             labelColor="yellowWhite"
-            style={{ display: "flex", width: "100%", width: "100%" }}
+            style={{ display: "flex", width: "100%" }}
           />
         </ParallaxLayer>
       </Parallax>
