@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import styles from "./home.module.css";
+import styles from "./Home.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 // ASSETS
@@ -8,10 +8,8 @@ import CasaAmarela from "../../Assets/logo_casa_amarela.svg?react";
 import CasaAmarelaEstatistica from "../../Assets/casa_amarela_estatistica.svg?react";
 import Barrinha from "../../Assets/barrinha.svg?react";
 import LogoLabelRed from "../../Assets/logo_label_red.svg?react";
-import HospitalityRoom from "../../Assets/hospitality_room.svg?react";
 import LogoLabelGreen from "../../Assets/logo_label_green.svg?react";
 import PalmTrees from "../../Assets/palm_trees.svg?react";
-import LogoSea from "../../Assets/logo_sea.svg?react";
 import LogoLabelOrange from "../../Assets/logo_label_orange.svg?react";
 
 // COMPONENTS
@@ -166,7 +164,7 @@ const Home = () => {
       <Parallax pages={11} ref={parallaxRef} className={styles.desktop}>
         <ParallaxLayer
           offset={0}
-          speed={0.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <img
@@ -183,7 +181,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={1}
-          speed={1.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "start", width: "100%" }}
         >
           <div className={`${styles.casaAmarelaImg}`}>
@@ -215,7 +213,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={2}
-          speed={1.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "start", width: "100%" }}
         >
           <div className={`${styles.casaAmarelaEstatisticas}`}>
@@ -225,7 +223,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={3}
-          speed={1.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={`${styles.hospitality}`}>
@@ -254,14 +252,17 @@ const Home = () => {
               />
             </div>
             <div className={styles.hospitalityRoom}>
-              <HospitalityRoom />
+              <img
+                src="src/Assets/hospitality_room.png"
+                alt="Hospitality Room"
+              />
             </div>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={4.5}
-          speed={1.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={styles.housesMap}>
@@ -375,13 +376,13 @@ const Home = () => {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={5} speed={1.5}>
+        <ParallaxLayer offset={5} speed={2}>
           <div className={`${styles.piawoodImg} ${styles.desktop}`}>
             <PalmTrees />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={6} speed={1.5}>
+        <ParallaxLayer offset={6} speed={2}>
           <div className={`${styles.piawoodEstatisticas} ${styles.desktop}`}>
             <img
               src="src/Assets/piawood_estatistica.png"
@@ -389,7 +390,7 @@ const Home = () => {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={7} speed={1.5}>
+        <ParallaxLayer offset={7} speed={2}>
           <div id="events" className={`${styles.events}`}>
             <div className={styles.eventsInfo}>
               <Title label="Live and" type="green" />
@@ -406,14 +407,14 @@ const Home = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={8} speed={1.5} onWheel={onScroll}>
+        <ParallaxLayer offset={8} speed={2} onWheel={onScroll}>
           <div className={styles.yellowFilme}>
             <div className={styles.curtainContainer}>
               <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
               <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
               <div className={styles.curtainContent}>
                 <div className={styles.yellowFilmeImg}>
-                  <LogoSea />
+                  <img src="src/Assets/logo_sea.png" alt="Logo Sea" />
                 </div>
                 <div className={styles.hospitalityInfo}>
                   <div className={styles.hospitalityTitle}>
@@ -442,7 +443,7 @@ const Home = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={9} speed={1.5}>
+        <ParallaxLayer offset={9} speed={2}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
@@ -455,7 +456,7 @@ const Home = () => {
             ></iframe>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={10} speed={1.5}>
+        <ParallaxLayer offset={10} speed={2}>
           <Footer
             labelColor="yellowWhite"
             style={{ display: "flex", width: "100%" }}
@@ -465,7 +466,7 @@ const Home = () => {
       <Parallax ref={parallaxRef} pages={10} className={styles.mobile}>
         <ParallaxLayer
           offset={0}
-          speed={0.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <img
@@ -507,7 +508,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={2}
-          speed={1.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={styles.casaAmarelaEstatisticas}>
@@ -516,7 +517,7 @@ const Home = () => {
         </ParallaxLayer>
         <ParallaxLayer
           offset={3}
-          speed={1.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={`${styles.hospitality}`}>
@@ -545,14 +546,17 @@ const Home = () => {
               />
             </div>
             <div className={styles.hospitalityRoom}>
-              <HospitalityRoom />
+              <img
+                src="src/Assets/hospitality_room.png"
+                alt="Hospitality Room"
+              />
             </div>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={4}
-          speed={1.5}
+          speed={2}
           style={{
             ...alignCenter,
             justifyContent: "center",
@@ -569,7 +573,7 @@ const Home = () => {
         </ParallaxLayer>
         <ParallaxLayer
           offset={5}
-          speed={1.5}
+          speed={2}
           style={{
             ...alignCenter,
             justifyContent: "center",
@@ -596,7 +600,7 @@ const Home = () => {
             <PalmTrees />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={6} speed={1.5}>
+        <ParallaxLayer offset={6} speed={2}>
           <div className={`${styles.piawoodEstatisticas}`}>
             <img
               src="src/Assets/piawood_estatistica.png"
@@ -617,14 +621,14 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={7} speed={1.5} onWheel={onScroll}>
+        <ParallaxLayer offset={7} speed={2} onWheel={onScroll}>
           <div className={styles.yellowFilme}>
             <div className={styles.curtainContainer}>
               <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
               <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
               <div className={styles.curtainContent}>
                 <div className={styles.yellowFilmeImg}>
-                  <LogoSea />
+                  <img src="src/Assets/logo_sea.png" alt="Logo Sea" />
                 </div>
                 <div className={styles.hospitalityInfo}>
                   <div className={styles.hospitalityTitle}>
@@ -653,7 +657,7 @@ const Home = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={8} speed={1.5}>
+        <ParallaxLayer offset={8} speed={2}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
@@ -666,7 +670,7 @@ const Home = () => {
             ></iframe>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={9} speed={1.5}>
+        <ParallaxLayer offset={9} speed={2}>
           <Footer
             labelColor="yellowWhite"
             style={{ display: "flex", width: "100%" }}

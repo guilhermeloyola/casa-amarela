@@ -85,7 +85,7 @@ body {
 
 .hospitality {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -105,6 +105,15 @@ body {
   display: flex;
   gap: 2rem;
   flex-direction: column;
+}
+
+.hospitalityRoom {
+  width: 50%;
+}
+
+.hospitalityRoom img {
+  width: 100%;
+  height: auto;
 }
 
 .houses {
@@ -366,6 +375,7 @@ body {
 
   .hospitality {
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
     padding: 2rem;
     height: 100%;
@@ -381,10 +391,10 @@ body {
   }
 
   .hospitalityRoom {
-    width: 90%;
+    width: 100%;
   }
 
-  .hospitalityRoom svg {
+  .hospitalityRoom img {
     width: 100%;
     height: auto;
   }
