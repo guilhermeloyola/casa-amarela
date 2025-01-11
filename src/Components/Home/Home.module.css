@@ -7,7 +7,6 @@ body,
 }
 
 body {
-  font-family: system-ui;
   margin: 0;
 }
 
@@ -336,5 +335,115 @@ body {
   .casaAmarelaInfo {
     width: 100%;
     padding: 2rem;
+    align-items: center;
+  }
+
+  .casaAmarelaImg {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .casaAmarelaBarrinha {
+    top: -5rem;
+    left: -1rem;
+  }
+
+  .casaAmarelaEstatisticas {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .casaAmarelaEstatisticas svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .hospitality {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    height: 100%;
+  }
+
+  .hospitalityInfo {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hospitalityTitle {
+    flex-direction: row;
+  }
+
+  .hospitalityRoom {
+    width: 90%;
+  }
+
+  .hospitalityRoom svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .housesMap {
+    position: absolute;
+    padding: 0;
+  }
+
+  .housesMap img {
+    padding: 0.5rem;
+    border-radius: 5vh;
+    height: 100%;
+    width: 100%;
+  }
+
+  .housesCard {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+  }
+
+  .piawoodInfo {
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .piawoodImg {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .piawoodImg svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .piawoodEstatisticas {
+    width: 100%;
+    height: auto;
+    padding: 4rem;
+    display: flex;
+    justify-items: center;
+  }
+
+  .events {
+    padding: 0rem 2rem;
+    height: auto;
+    background-color: var(--color-blue);
+  }
+
+  .eventsImg {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .eventsImg img {
+    position: absolute;
+    bottom: 50%;
   }
 }

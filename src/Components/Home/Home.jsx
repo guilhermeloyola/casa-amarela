@@ -5,6 +5,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 // ASSETS
 import CasaAmarela from "../../Assets/logo_casa_amarela.svg?react";
+import CasaAmarelaEstatistica from "../../Assets/casa_amarela_estatistica.svg?react";
 import Barrinha from "../../Assets/barrinha.svg?react";
 import LogoLabelRed from "../../Assets/logo_label_red.svg?react";
 import HospitalityRoom from "../../Assets/hospitality_room.svg?react";
@@ -153,9 +154,6 @@ const Home = () => {
   });
 
   const alignCenter = { display: "flex", alignItems: "center" };
-  const verifyMobile = () => {
-    return window.innerWidth < 768;
-  };
 
   return (
     <div>
@@ -165,12 +163,11 @@ const Home = () => {
         mobileButton="transparent30"
         logo={CasaAmarela}
       />
-      <Parallax pages={11} ref={parallaxRef}>
+      <Parallax pages={11} ref={parallaxRef} className={styles.desktop}>
         <ParallaxLayer
           offset={0}
           speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
-          enabled={styles.desktop.display === "block"}
         >
           <img
             src="src/Assets/home_1.png"
@@ -461,7 +458,218 @@ const Home = () => {
         <ParallaxLayer offset={10} speed={1.5}>
           <Footer
             labelColor="yellowWhite"
-            style={{ display: "flex", width: "100%", height: "100%" }}
+            style={{ display: "flex", width: "100%", width: "100%" }}
+          />
+        </ParallaxLayer>
+      </Parallax>
+      <Parallax pages={10} className={styles.mobile}>
+        <ParallaxLayer
+          offset={0}
+          speed={0.5}
+          style={{ ...alignCenter, justifyContent: "center" }}
+        >
+          <img
+            src="src/Assets/home_1_mobile.png"
+            className={`${styles.homeImg}`}
+            alt="Quarto"
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1}
+          style={{
+            ...alignCenter,
+            flexDirection: "column",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <div className={`${styles.casaAmarelaInfo}`}>
+            <Title label="CASA AMARELA" type="yellow" />
+            <TextContent
+              size="medium"
+              type="black"
+              content="A Casa Amarela é um projeto que conecta turismo, comunidade e sustentabilidade em Barrinha, PI. Nosso objetivo é contribuir para o desenvolvimento da região, promovendo educação, cultura e iniciativas que impulsionem a economia local de forma colaborativa e consciente."
+              maxCharacters="maxCharacters30"
+            />
+          </div>
+          <div className={`${styles.casaAmarelaImg}`}>
+            <ImageGallery
+              items={images}
+              showThumbnails={false}
+              showPlayButton={false}
+              showFullscreenButton={false}
+              autoPlay={false}
+            />
+            <Barrinha className={styles.casaAmarelaBarrinha} />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2}
+          speed={1.5}
+          style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
+        >
+          <div classList={styles.casaAmarelaEstatisticas}>
+            <CasaAmarelaEstatistica />
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={3}
+          speed={1.5}
+          style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
+        >
+          <div className={`${styles.hospitality}`}>
+            <div className={styles.hospitalityInfo}>
+              <div className={styles.hospitalityTitle}>
+                <div>
+                  <Label
+                    label="Hospitality"
+                    type="redReverse"
+                    border="squareRound"
+                    icon={LogoLabelRed}
+                  />
+                </div>
+
+                <Title label="Live and experience" type="redAccent3" />
+              </div>
+              <TextContent
+                type="redAccent2"
+                content="A Casa Amarela oferece casas na costa do Piauí, criando experiências aconchegantes e autênticas. Valorizamos o turismo sustentável e comunitário, com atividades personalizadas para cada visitante. Aqui, você pode aproveitar paisagens incríveis, vivências únicas e se conectar de verdade com a cultura e as pessoas da região."
+                maxCharacters="maxCharacters30"
+              />
+              <Hyperlink
+                color="redAccent3"
+                label="Saiba mais sobre nossas hospedagens"
+                href="/Hospitality"
+              />
+            </div>
+            <div className={styles.hospitalityRoom}>
+              <HospitalityRoom />
+            </div>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={1.5}
+          style={{
+            ...alignCenter,
+            justifyContent: "center",
+            width: "100%",
+            flexDirection: "column",
+          }}
+        >
+          <div className={styles.housesMap}>
+            <img src="src/Assets/houses_mobile.jpeg" alt="Mapa de estadias" />
+          </div>
+          <div className={styles.housesCard}>
+            <ImageGallery items={videos} showIndex showPlayButton />
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={5}
+          speed={1.5}
+          style={{
+            ...alignCenter,
+            justifyContent: "center",
+            width: "100%",
+            flexDirection: "column",
+          }}
+        >
+          <div className={styles.piawoodInfo}>
+            <div className={styles.hospitalityTitle}>
+              <Label
+                label="Piawood"
+                type="blue"
+                icon={LogoLabelGreen}
+                border="squareRound"
+              />
+            </div>
+            <TextContent
+              type="black"
+              content="Piawood é o hub cultural da Casa Amarela, dedicado ao fomento da cultura e talentos locais na região de Barrinha, PI. Atuando como curador e plataforma de crescimento, Piawood promove eventos que integram música, artes visuais, gastronomia e esporte, gerando impacto na cena cultural da região. Além disso, a produtora Yellow Film cria conteúdos audiovisuais que documentam e divulgam essas experiências, conectando a riqueza cultural local a um público mais amplo."
+              maxCharacters="maxCharacters30"
+            />
+          </div>
+          <div className={`${styles.piawoodImg}`}>
+            <PalmTrees />
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={6} speed={1.5}>
+          <div className={`${styles.piawoodEstatisticas}`}>
+            <img
+              src="src/Assets/piawood_estatistica.png"
+              alt="Estatísticas Piawood"
+            />
+          </div>
+          <div id="events" className={`${styles.events}`}>
+            <div className={styles.eventsInfo}>
+              <Title label="Live and" type="green" />
+              <Title label="experience" type="green" />
+              <div>
+                <Button label="Ver eventos" type="green" />
+              </div>
+            </div>
+            <div className={`${styles.eventsImg}`}>
+              <img src="src/Assets/events_img.png" alt="Eventos" />
+            </div>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={7} speed={1.5} onWheel={onScroll}>
+          <div className={styles.yellowFilme}>
+            <div className={styles.curtainContainer}>
+              <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
+              <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
+              <div className={styles.curtainContent}>
+                <div className={styles.yellowFilmeImg}>
+                  <LogoSea />
+                </div>
+                <div className={styles.hospitalityInfo}>
+                  <div className={styles.hospitalityTitle}>
+                    <div>
+                      <Label
+                        label="Yellow Film"
+                        type="orange"
+                        icon={LogoLabelOrange}
+                        border="squareRound"
+                      />
+                    </div>
+                  </div>
+                  <TextContent
+                    type="blackBrown"
+                    content="A Yellow Filme é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Filme oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções."
+                    maxCharacters="maxCharacters30"
+                  />
+                  <Hyperlink
+                    color="orange"
+                    label="Saiba mais sobre a Yellow Film"
+                    href="/YellowFilm"
+                    arrowColor="arrowOrange"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={8} speed={1.5}>
+          <div className={styles.videoContainer}>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Hjq-ZzT1tjw?si=7ACuc3MS861aW3Uc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={9} speed={1.5}>
+          <Footer
+            labelColor="yellowWhite"
+            style={{ display: "flex", width: "100%", width: "100%" }}
           />
         </ParallaxLayer>
       </Parallax>
