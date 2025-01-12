@@ -331,7 +331,7 @@ const Home = () => {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={6} speed={2}>
+        <ParallaxLayer offset={6} speed={1.5}>
           <div id="events" className={`${styles.events}`}>
             <div className={styles.eventsInfo}>
               <Title label="Live and" type="green" />
@@ -345,7 +345,7 @@ const Home = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={6.99} speed={1}>
+        <ParallaxLayer offset={6.99} speed={1.5}>
           <Parallax pages={3} className={styles.yellowFilme}>
             <ParallaxLayer
               horizontal={true}
@@ -427,7 +427,7 @@ const Home = () => {
             </ParallaxLayer>
           </Parallax>
         </ParallaxLayer>
-        <ParallaxLayer offset={7} speed={2.5}>
+        <ParallaxLayer offset={7} speed={3}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
