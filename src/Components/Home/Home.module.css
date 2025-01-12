@@ -272,7 +272,7 @@ body {
 
 .eventsImg img {
   position: absolute;
-  top: -5%;
+  top: -10%;
   width: 40%;
 }
 
@@ -281,10 +281,6 @@ body {
   gap: 3.5rem;
   background: var(--color-orange-accent);
   justify-content: center;
-}
-
-.yellowFilme::-webkit-scrollbar {
-  display: none;
 }
 
 .curtainContainer {
@@ -304,11 +300,15 @@ body {
 }
 
 .leftCurtain {
+  left: 0;
+  transform: translateX(0);
   background: url("/src/Assets/curtain_left.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .rightCurtain {
+  right: 0;
+  transform: translateX(0);
   background: url("/src/Assets/curtain_right.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -320,12 +320,11 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  gap: 5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   color: #fff;
   background-color: var(--color-orange-accent);
-  /* opacity: 0; */
+  opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
@@ -456,6 +455,7 @@ body {
 
   .eventsInfo {
     height: 100%;
+    padding: 2rem 0rem;
   }
 
   .eventsImg {
@@ -473,9 +473,5 @@ body {
     flex-direction: column-reverse;
     padding: 1rem 1rem;
     gap: 1rem;
-  }
-
-  .yellowFilmeMobile::-webkit-scrollbar {
-    display: none;
   }
 }

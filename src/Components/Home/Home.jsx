@@ -66,6 +66,27 @@ const Home = () => {
     setHovered(label);
   };
 
+  const handleMouseEnterCurtain = () => {
+    const leftCurtain = document.querySelector(`.${styles.leftCurtain}`);
+    const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
+    const content = document.querySelector(`.${styles.curtainContent}`);
+
+    leftCurtain.style.transform = `translateX(-100%)`;
+    rightCurtain.style.transform = `translateX(100%)`;
+    content.classList.add(styles.visible);
+  };
+
+  const handleMouseLeaveCurtain = () => {
+    const leftCurtain = document.querySelector(`.${styles.leftCurtain}`);
+    const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
+    const content = document.querySelector(`.${styles.curtainContent}`);
+
+    // Ensure curtains are closed initially
+    leftCurtain.style.transform = `translateX(0)`;
+    rightCurtain.style.transform = `translateX(0)`;
+    content.classList.remove(styles.visible);
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState("rsJefiaWU9U");
 
@@ -331,7 +352,7 @@ const Home = () => {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={6} speed={1.5}>
+        <ParallaxLayer offset={6} speed={1}>
           <div id="events" className={`${styles.events}`}>
             <div className={styles.eventsInfo}>
               <Title label="Live and" type="green" />
@@ -345,38 +366,15 @@ const Home = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={6.99} speed={1.5}>
-          <Parallax pages={3} className={styles.yellowFilme}>
-            <ParallaxLayer
-              horizontal={true}
-              offset={0}
-              speed={1}
-              factor={1}
-              style={{ zIndex: 1 }}
-            >
-              <div
-                style={{
-                  width: "100vw",
-                  height: "200vh",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transform: "translateX(-50vw)",
-                }}
-                className={`${styles.curtain} ${styles.leftCurtain}`}
-              ></div>
-            </ParallaxLayer>
-            <ParallaxLayer
-              sticky={{ start: 0, end: 2 }}
-              speed={0}
-              factor={1}
-              style={{
-                zIndex: -1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+        <ParallaxLayer offset={6.99} speed={1}>
+          <div
+            className={styles.yellowFilme}
+            onMouseEnter={handleMouseEnterCurtain}
+            onMouseLeave={handleMouseLeaveCurtain}
+          >
+            <div className={styles.curtainContainer}>
+              <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
+              <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
               <div className={styles.curtainContent}>
                 <div className={styles.yellowFilmeImg}>
                   <img src="src/Assets/logo_sea.png" alt="Logo Sea" />
@@ -405,29 +403,10 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </ParallaxLayer>
-            <ParallaxLayer
-              horizontal={true}
-              offset={0}
-              speed={-1}
-              factor={1}
-              style={{ zIndex: 1 }}
-            >
-              <div
-                style={{
-                  width: "100vw",
-                  height: "200vh",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transform: "translateX(50vw)",
-                }}
-                className={`${styles.curtain} ${styles.rightCurtain}`}
-              ></div>
-            </ParallaxLayer>
-          </Parallax>
+            </div>
+          </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={7} speed={3}>
+        <ParallaxLayer offset={7} speed={2}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
@@ -615,37 +594,14 @@ const Home = () => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={3.9} speed={1}>
-          <Parallax pages={3} className={styles.yellowFilmeMobile}>
-            <ParallaxLayer
-              horizontal={true}
-              offset={0}
-              speed={1}
-              factor={2}
-              style={{ zIndex: 1 }}
-            >
-              <div
-                style={{
-                  width: "100vw",
-                  height: "200vh",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transform: "translateX(-50vw)",
-                }}
-                className={`${styles.curtain} ${styles.leftCurtain}`}
-              ></div>
-            </ParallaxLayer>
-            <ParallaxLayer
-              sticky={{ start: 0, end: 0 }}
-              speed={0}
-              factor={2}
-              style={{
-                zIndex: -1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+          <div
+            className={styles.yellowFilme}
+            onTouchStart={handleMouseEnterCurtain}
+            onTouchEnd={handleMouseLeaveCurtain}
+          >
+            <div className={styles.curtainContainer}>
+              <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
+              <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
               <div className={styles.curtainContent}>
                 <div className={styles.yellowFilmeImg}>
                   <img src="src/Assets/logo_sea.png" alt="Logo Sea" />
@@ -674,27 +630,8 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </ParallaxLayer>
-            <ParallaxLayer
-              horizontal={true}
-              offset={0}
-              speed={-1}
-              factor={2}
-              style={{ zIndex: 1 }}
-            >
-              <div
-                style={{
-                  width: "100vw",
-                  height: "200vh",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transform: "translateX(50vw)",
-                }}
-                className={`${styles.curtain} ${styles.rightCurtain}`}
-              ></div>
-            </ParallaxLayer>
-          </Parallax>
+            </div>
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={4} speed={3}>
