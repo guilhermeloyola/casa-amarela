@@ -90,22 +90,9 @@ const Home = () => {
     const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
     const content = document.querySelector(`.${styles.curtainContent}`);
     if (leftCurtain && rightCurtain && content) {
-      console.log("Opening curtain");
-      console.log("Before:", {
-        leftCurtain: leftCurtain.style.transform,
-        rightCurtain: rightCurtain.style.transform,
-        contentVisible: content.classList.contains(styles.visible),
-      });
       leftCurtain.style.transform = "translateX(-100%)";
       rightCurtain.style.transform = "translateX(100%)";
       content.classList.add(styles.visible);
-      console.log("After:", {
-        leftCurtain: leftCurtain.style.transform,
-        rightCurtain: rightCurtain.style.transform,
-        contentVisible: content.classList.contains(styles.visible),
-      });
-    } else {
-      console.error("Curtain elements not found");
     }
   };
   const handleMouseLeaveCurtain = () => {
@@ -113,12 +100,9 @@ const Home = () => {
     const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
     const content = document.querySelector(`.${styles.curtainContent}`);
     if (leftCurtain && rightCurtain && content) {
-      console.log("Closing curtain");
       leftCurtain.style.transform = "translateX(0)";
       rightCurtain.style.transform = "translateX(0)";
       content.classList.remove(styles.visible);
-    } else {
-      console.error("Curtain elements not found");
     }
   };
 
