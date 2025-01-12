@@ -296,15 +296,11 @@ body {
 }
 
 .leftCurtain {
-  left: 0;
-  transform: translateX(0);
   background: url("/src/Assets/curtain_left.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .rightCurtain {
-  right: 0;
-  transform: translateX(0);
   background: url("/src/Assets/curtain_right.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -321,7 +317,7 @@ body {
   justify-content: center;
   color: #fff;
   background-color: var(--color-orange-accent);
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 1s ease-in-out;
 }
 
@@ -463,5 +459,15 @@ body {
   .eventsImg img {
     position: absolute;
     top: -5%;
+  }
+
+  .curtainContent {
+    flex-direction: column-reverse;
+    padding: 1rem 1rem;
+    gap: 1rem;
+  }
+
+  .yellowFilmeMobile::-webkit-scrollbar {
+    display: none;
   }
 }

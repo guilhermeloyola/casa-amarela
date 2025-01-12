@@ -92,65 +92,6 @@ const Home = () => {
     original: img,
     thumbnail: img,
   }));
-  const parallaxRef = useRef(null);
-  const onScroll = () => {
-    const yellowFilmeSection = document.querySelector(`.${styles.yellowFilme}`);
-    const leftCurtain = document.querySelector(`.${styles.leftCurtain}`);
-    const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
-    const content = document.querySelector(`.${styles.curtainContent}`);
-    let animationInProgress = false;
-    const handleTransitionEnd = () => {
-      animationInProgress = false;
-      leftCurtain.removeEventListener("transitionend", handleTransitionEnd);
-      rightCurtain.removeEventListener("transitionend", handleTransitionEnd);
-    };
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !animationInProgress) {
-            animationInProgress = true;
-            if (entry.target === yellowFilmeSection) {
-              leftCurtain.style.transform = `translateX(0)`;
-              rightCurtain.style.transform = `translateX(0)`;
-              content.classList.remove(styles.visible);
-              setTimeout(() => {
-                leftCurtain.style.transform = `translateX(-100%)`;
-                rightCurtain.style.transform = `translateX(100%)`;
-                content.classList.add(styles.visible);
-                leftCurtain.addEventListener(
-                  "transitionend",
-                  handleTransitionEnd,
-                );
-                rightCurtain.addEventListener(
-                  "transitionend",
-                  handleTransitionEnd,
-                );
-              }, 100);
-            }
-          } else if (!entry.isIntersecting && !animationInProgress) {
-            leftCurtain.style.transform = `translateX(0)`;
-            rightCurtain.style.transform = `translateX(0)`;
-            content.classList.remove(styles.visible);
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-    if (yellowFilmeSection) {
-      observer.observe(yellowFilmeSection);
-    }
-    return () => {
-      if (yellowFilmeSection) {
-        observer.unobserve(yellowFilmeSection);
-      }
-    };
-  };
-
-  useEffect(() => {
-    if (parallaxRef.current.offset) return;
-    parallaxRef.current.container.onscroll = onScroll;
-  });
-
   const alignCenter = { display: "flex", alignItems: "center" };
 
   return (
@@ -161,7 +102,7 @@ const Home = () => {
         mobileButton="transparent30"
         logo={CasaAmarela}
       />
-      <Parallax pages={11} ref={parallaxRef} className={styles.desktop}>
+      <Parallax pages={11} className={styles.desktop}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -407,7 +348,7 @@ const Home = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={8} speed={1} onWheel={onScroll}>
+        <ParallaxLayer offset={8} speed={1}>
           <div className={styles.yellowFilme}>
             <div className={styles.curtainContainer}>
               <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
@@ -463,7 +404,7 @@ const Home = () => {
           />
         </ParallaxLayer>
       </Parallax>
-      <Parallax ref={parallaxRef} pages={6} className={styles.mobile}>
+      <Parallax pages={6} className={styles.mobile}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -624,11 +565,38 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={3.9} speed={1} onWheel={onScroll}>
-          <div className={styles.yellowFilme}>
-            <div className={styles.curtainContainer}>
-              <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
-              <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
+        <ParallaxLayer offset={3.9} speed={1}>
+          <Parallax pages={3} className={styles.yellowFilmeMobile}>
+            <ParallaxLayer
+              horizontal={true}
+              offset={0}
+              speed={1}
+              factor={2}
+              style={{ zIndex: 1 }}
+            >
+              <div
+                style={{
+                  width: "100vw",
+                  height: "200vh",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transform: "translateX(-50vw)",
+                }}
+                className={`${styles.curtain} ${styles.leftCurtain}`}
+              ></div>
+            </ParallaxLayer>
+            <ParallaxLayer
+              sticky={{ start: 0, end: 0 }}
+              speed={0}
+              factor={2}
+              style={{
+                zIndex: -1,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <div className={styles.curtainContent}>
                 <div className={styles.yellowFilmeImg}>
                   <img src="src/Assets/logo_sea.png" alt="Logo Sea" />
@@ -657,8 +625,27 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </div>
-          </div>
+            </ParallaxLayer>
+            <ParallaxLayer
+              horizontal={true}
+              offset={0}
+              speed={-1}
+              factor={2}
+              style={{ zIndex: 1 }}
+            >
+              <div
+                style={{
+                  width: "100vw",
+                  height: "200vh",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transform: "translateX(50vw)",
+                }}
+                className={`${styles.curtain} ${styles.rightCurtain}`}
+              ></div>
+            </ParallaxLayer>
+          </Parallax>
         </ParallaxLayer>
 
         <ParallaxLayer offset={4} speed={3}>
