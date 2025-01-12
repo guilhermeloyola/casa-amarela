@@ -102,7 +102,7 @@ const Home = () => {
         mobileButton="transparent30"
         logo={CasaAmarela}
       />
-      <Parallax pages={11} className={styles.desktop}>
+      <Parallax pages={9} className={styles.desktop}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -164,7 +164,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={3}
-          speed={1}
+          speed={1.5}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={`${styles.hospitality}`}>
@@ -202,7 +202,7 @@ const Home = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4.5}
+          offset={3.99}
           speed={1}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
@@ -298,7 +298,7 @@ const Home = () => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 5, end: 6 }}
+          sticky={{ start: 4.5, end: 5 }}
           style={{ ...alignCenter, justifyContent: "end", width: "100%" }}
         >
           <div className={styles.piawoodInfo}>
@@ -317,13 +317,13 @@ const Home = () => {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={5} speed={1}>
+        <ParallaxLayer offset={4.5} speed={1}>
           <div className={`${styles.piawoodImg} ${styles.desktop}`}>
             <PalmTrees />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={6} speed={1}>
+        <ParallaxLayer offset={5} speed={1}>
           <div className={`${styles.piawoodEstatisticas} ${styles.desktop}`}>
             <img
               src="src/Assets/piawood_estatistica.png"
@@ -331,7 +331,7 @@ const Home = () => {
             />
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={7} speed={1}>
+        <ParallaxLayer offset={6} speed={2}>
           <div id="events" className={`${styles.events}`}>
             <div className={styles.eventsInfo}>
               <Title label="Live and" type="green" />
@@ -343,16 +343,40 @@ const Home = () => {
             <div className={styles.eventsImg}>
               <img src="src/Assets/events_img.png" alt="Estatísticas Piawood" />
             </div>
-            <div className={`${styles.eventsImg} ${styles.mobile}`}>
-              <img src="src/Assets/events_img_mobile.png" alt="Eventos" />
-            </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={8} speed={1}>
-          <div className={styles.yellowFilme}>
-            <div className={styles.curtainContainer}>
-              <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
-              <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
+        <ParallaxLayer offset={6.99} speed={1}>
+          <Parallax pages={3} className={styles.yellowFilme}>
+            <ParallaxLayer
+              horizontal={true}
+              offset={0}
+              speed={1}
+              factor={1}
+              style={{ zIndex: 1 }}
+            >
+              <div
+                style={{
+                  width: "100vw",
+                  height: "200vh",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transform: "translateX(-50vw)",
+                }}
+                className={`${styles.curtain} ${styles.leftCurtain}`}
+              ></div>
+            </ParallaxLayer>
+            <ParallaxLayer
+              sticky={{ start: 0, end: 2 }}
+              speed={0}
+              factor={1}
+              style={{
+                zIndex: -1,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <div className={styles.curtainContent}>
                 <div className={styles.yellowFilmeImg}>
                   <img src="src/Assets/logo_sea.png" alt="Logo Sea" />
@@ -381,10 +405,29 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </div>
-          </div>
+            </ParallaxLayer>
+            <ParallaxLayer
+              horizontal={true}
+              offset={0}
+              speed={-1}
+              factor={1}
+              style={{ zIndex: 1 }}
+            >
+              <div
+                style={{
+                  width: "100vw",
+                  height: "200vh",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transform: "translateX(50vw)",
+                }}
+                className={`${styles.curtain} ${styles.rightCurtain}`}
+              ></div>
+            </ParallaxLayer>
+          </Parallax>
         </ParallaxLayer>
-        <ParallaxLayer offset={9} speed={1}>
+        <ParallaxLayer offset={7} speed={2.5}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
@@ -397,11 +440,17 @@ const Home = () => {
             ></iframe>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={10} speed={1}>
-          <Footer
-            labelColor="yellowWhite"
-            style={{ display: "flex", width: "100%" }}
-          />
+        <ParallaxLayer
+          offset={7.9}
+          speed={0}
+          style={{
+            ...alignCenter,
+            justifyContent: "center",
+            width: "100%",
+            flexDirection: "column",
+          }}
+        >
+          <Footer labelColor="yellowWhite" />
         </ParallaxLayer>
       </Parallax>
       <Parallax pages={6} className={styles.mobile}>

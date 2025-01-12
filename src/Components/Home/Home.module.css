@@ -279,6 +279,10 @@ body {
   justify-content: center;
 }
 
+.yellowFilme::-webkit-scrollbar {
+  display: none;
+}
+
 .curtainContainer {
   position: relative;
   width: 100%;
