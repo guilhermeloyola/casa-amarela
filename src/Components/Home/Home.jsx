@@ -66,25 +66,60 @@ const Home = () => {
     setHovered(label);
   };
 
+  const handleTouchEnterCurtain = () => {
+    const leftCurtain = document.querySelector(`.${styles.leftCurtainMobile}`);
+    const rightCurtain = document.querySelector(
+      `.${styles.rightCurtainMobile}`,
+    );
+    const content = document.querySelector(`.${styles.curtainContentMobile}`);
+    if (leftCurtain && rightCurtain && content) {
+      leftCurtain.style.transform = "translateX(-100%)";
+      rightCurtain.style.transform = "translateX(100%)";
+      content.classList.add(styles.visible);
+
+      setTimeout(() => {
+        leftCurtain.style.transform = "translateX(0)";
+        rightCurtain.style.transform = "translateX(0)";
+        content.classList.remove(styles.visible);
+      }, 5000);
+    }
+  };
+
   const handleMouseEnterCurtain = () => {
     const leftCurtain = document.querySelector(`.${styles.leftCurtain}`);
     const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
     const content = document.querySelector(`.${styles.curtainContent}`);
-
-    leftCurtain.style.transform = `translateX(-100%)`;
-    rightCurtain.style.transform = `translateX(100%)`;
-    content.classList.add(styles.visible);
+    if (leftCurtain && rightCurtain && content) {
+      console.log("Opening curtain");
+      console.log("Before:", {
+        leftCurtain: leftCurtain.style.transform,
+        rightCurtain: rightCurtain.style.transform,
+        contentVisible: content.classList.contains(styles.visible),
+      });
+      leftCurtain.style.transform = "translateX(-100%)";
+      rightCurtain.style.transform = "translateX(100%)";
+      content.classList.add(styles.visible);
+      console.log("After:", {
+        leftCurtain: leftCurtain.style.transform,
+        rightCurtain: rightCurtain.style.transform,
+        contentVisible: content.classList.contains(styles.visible),
+      });
+    } else {
+      console.error("Curtain elements not found");
+    }
   };
-
   const handleMouseLeaveCurtain = () => {
     const leftCurtain = document.querySelector(`.${styles.leftCurtain}`);
     const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
     const content = document.querySelector(`.${styles.curtainContent}`);
-
-    // Ensure curtains are closed initially
-    leftCurtain.style.transform = `translateX(0)`;
-    rightCurtain.style.transform = `translateX(0)`;
-    content.classList.remove(styles.visible);
+    if (leftCurtain && rightCurtain && content) {
+      console.log("Closing curtain");
+      leftCurtain.style.transform = "translateX(0)";
+      rightCurtain.style.transform = "translateX(0)";
+      content.classList.remove(styles.visible);
+    } else {
+      console.error("Curtain elements not found");
+    }
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -596,13 +631,16 @@ const Home = () => {
         <ParallaxLayer offset={3.9} speed={1}>
           <div
             className={styles.yellowFilme}
-            onTouchStart={handleMouseEnterCurtain}
-            onTouchEnd={handleMouseLeaveCurtain}
+            onTouchStart={handleTouchEnterCurtain}
           >
             <div className={styles.curtainContainer}>
-              <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
-              <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
-              <div className={styles.curtainContent}>
+              <div
+                className={`${styles.curtain} ${styles.leftCurtainMobile}`}
+              ></div>
+              <div
+                className={`${styles.curtain} ${styles.rightCurtainMobile}`}
+              ></div>
+              <div className={styles.curtainContentMobile}>
                 <div className={styles.yellowFilmeImg}>
                   <img src="src/Assets/logo_sea.png" alt="Logo Sea" />
                 </div>
