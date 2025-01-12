@@ -501,7 +501,7 @@ const Home = () => {
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={styles.casaAmarelaEstatisticas}>
-            <CasaAmarelaEstatistica />
+            <img src="src/Assets/destaques_home.png" />
           </div>
         </ParallaxLayer>
 
