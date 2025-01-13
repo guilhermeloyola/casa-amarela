@@ -1,3 +1,11 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
 .piawoodBackground {
   background-color: var(--color-blue);
   z-index: 1;

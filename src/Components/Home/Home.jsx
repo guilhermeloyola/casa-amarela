@@ -145,7 +145,7 @@ const Home = () => {
       <Parallax pages={9} className={styles.desktop}>
         <ParallaxLayer
           offset={0}
-          speed={1}
+          speed={0.5}
           style={{ ...alignCenter, justifyContent: "center" }}
         >
           <img
@@ -162,7 +162,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={1}
-          speed={1}
+          speed={0.1}
           style={{ ...alignCenter, justifyContent: "start", width: "100%" }}
         >
           <div className={`${styles.casaAmarelaImg}`}>
@@ -194,7 +194,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={2}
-          speed={1}
+          speed={0.1}
           style={{ ...alignCenter, justifyContent: "start", width: "100%" }}
         >
           <div className={`${styles.casaAmarelaEstatisticas}`}>
@@ -204,7 +204,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={3}
-          speed={1.5}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={`${styles.hospitality}`}>
@@ -425,7 +425,7 @@ const Home = () => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={7} speed={2}>
+        <ParallaxLayer offset={7} speed={1}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
@@ -451,7 +451,7 @@ const Home = () => {
           <Footer labelColor="yellowWhite" />
         </ParallaxLayer>
       </Parallax>
-      <Parallax pages={6} className={styles.mobile}>
+      <Parallax pages={7.5} className={styles.mobile}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -496,8 +496,8 @@ const Home = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1.2}
-          speed={3}
+          offset={1.1}
+          speed={2}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={styles.casaAmarelaEstatisticas}>
@@ -507,7 +507,8 @@ const Home = () => {
 
         <ParallaxLayer
           offset={1.99}
-          speed={1}
+          speed={3}
+          factor={1.5}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={`${styles.hospitality}`}>
@@ -544,8 +545,8 @@ const Home = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2}
-          speed={3}
+          offset={2.2}
+          speed={0.25}
           style={{
             ...alignCenter,
             justifyContent: "center",
@@ -562,7 +563,7 @@ const Home = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2.99}
+          offset={3}
           speed={1}
           style={{
             ...alignCenter,
@@ -591,7 +592,7 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={3} speed={3}>
+        <ParallaxLayer offset={3.99} speed={0.25}>
           <div className={`${styles.piawoodEstatisticas}`}>
             <img
               src="src/Assets/piawood_estatistica.png"
@@ -612,7 +613,7 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={3.9} speed={1}>
+        <ParallaxLayer offset={4.99} speed={0.25}>
           <div
             className={styles.yellowFilme}
             onTouchStart={handleTouchEnterCurtain}
@@ -656,7 +657,7 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={4} speed={3}>
+        <ParallaxLayer offset={5.9} speed={0.25}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
@@ -671,7 +672,7 @@ const Home = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4.9}
+          offset={6.5}
           speed={0}
           style={{
             ...alignCenter,

@@ -1,24 +1,24 @@
-import React from 'react';
-import styles from './Informacoes.module.css';
-import Header from '../Utils/Header';
-import Divider from '../Utils/Divider';
-import LogoBrown from '../../Assets/logo_label_menu.svg?react';
-import LogoRed from '../../Assets/logo_label_red_sm.svg?react';
-import LogoBlue from '../../Assets/logo_label_green.svg?react';
-import LogoLabelOrange from '../../Assets/logo_label_orange.svg?react';
-import ExplamationPoint from '../../Assets/exclamation_point_round.svg?react';
-import Lupa from '../../Assets/magnifying_glass.svg?react';
-import TextContent from '../Utils/TextContent';
-import Title from '../Utils/Title';
-import Label from '../Utils/Label';
-import Footer from '../Utils/Footer';
-import Button from '../Utils/Button';
-import Input from '../Utils/Input';
-import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
+import React from "react";
+import styles from "./Informacoes.module.css";
+import Header from "../Utils/Header";
+import Divider from "../Utils/Divider";
+import LogoBrown from "../../Assets/logo_label_menu.svg?react";
+import LogoRed from "../../Assets/logo_label_red_sm.svg?react";
+import LogoBlue from "../../Assets/logo_label_green.svg?react";
+import LogoLabelOrange from "../../Assets/logo_label_orange.svg?react";
+import ExplamationPoint from "../../Assets/exclamation_point_round.svg?react";
+import Lupa from "../../Assets/magnifying_glass.svg?react";
+import TextContent from "../Utils/TextContent";
+import Title from "../Utils/Title";
+import Label from "../Utils/Label";
+import Footer from "../Utils/Footer";
+import Button from "../Utils/Button";
+import Input from "../Utils/Input";
+import CasaAmarela from "../../Assets/logo_casa_amarela.svg?react";
 
 const Informacoes = () => {
   return (
-    <div className={`container`}>
+    <div className={`container ${styles.container}`}>
       <Header
         buttonColor="yellow"
         className={styles.header}
