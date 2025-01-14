@@ -69,6 +69,10 @@ input {
   color: var(--color-yellow);
 }
 
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  max-height: none;
+}
+
 .image-gallery {
   width: 100%;
 }

@@ -41,7 +41,7 @@ const HospitalityHospedagem = () => {
 
     return (
       <div className={styles.containerCasas} key={casa.nome}>
-        <div className={styles.desktop}>
+        <div>
           <Title label={casa.nome} type="red" />
         </div>
 

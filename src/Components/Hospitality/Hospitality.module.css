@@ -436,4 +436,8 @@ iframe {
   .paginacao svg {
     min-width: 2rem;
   }
+
+  .mapa {
+    padding: 0.5rem;
+  }
 }
