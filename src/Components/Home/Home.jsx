@@ -466,7 +466,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={0.99}
-          speed={1}
+          speed={0.75}
           style={{
             ...alignCenter,
             flexDirection: "column",
@@ -497,7 +497,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={1.1}
-          speed={2}
+          speed={1.5}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={styles.casaAmarelaEstatisticas}>
@@ -507,7 +507,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={1.99}
-          speed={3}
+          speed={2}
           factor={1.5}
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
@@ -546,7 +546,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={2.2}
-          speed={0.25}
+          speed={0.5}
           style={{
             ...alignCenter,
             justifyContent: "center",
@@ -564,7 +564,7 @@ const Home = () => {
 
         <ParallaxLayer
           offset={3}
-          speed={1}
+          speed={0.25}
           style={{
             ...alignCenter,
             justifyContent: "center",
@@ -592,7 +592,7 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={3.99} speed={0.25}>
+        <ParallaxLayer offset={3.99} speed={0.1}>
           <div className={`${styles.piawoodEstatisticas}`}>
             <img
               src="src/Assets/piawood_estatistica.png"
@@ -613,7 +613,7 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={4.99} speed={0.25}>
+        <ParallaxLayer offset={4.99} speed={0.1}>
           <div
             className={styles.yellowFilme}
             onTouchStart={handleTouchEnterCurtain}
@@ -657,7 +657,7 @@ const Home = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={5.9} speed={0.25}>
+        <ParallaxLayer offset={5.9} speed={0.1}>
           <div className={styles.videoContainer}>
             <iframe
               width="100%"
