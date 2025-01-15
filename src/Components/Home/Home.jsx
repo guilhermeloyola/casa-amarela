@@ -163,7 +163,12 @@ const Home = () => {
         <ParallaxLayer
           offset={1}
           speed={0.1}
-          style={{ ...alignCenter, justifyContent: "start", width: "100%" }}
+          style={{
+            ...alignCenter,
+            justifyContent: "start",
+            width: "100%",
+            zIndex: "99999",
+          }}
         >
           <div className={`${styles.casaAmarelaImg}`}>
             <ImageGallery
@@ -179,7 +184,12 @@ const Home = () => {
 
         <ParallaxLayer
           sticky={{ start: 1, end: 2 }}
-          style={{ ...alignCenter, justifyContent: "end", width: "100%" }}
+          style={{
+            ...alignCenter,
+            justifyContent: "end",
+            width: "100%",
+            zIndex: "-1",
+          }}
         >
           <div className={`${styles.casaAmarelaInfo}`}>
             <Title label="CASA AMARELA" type="yellow" />
