@@ -1,21 +1,24 @@
-import React from 'react';
-import styles from './FaleConosco.module.css';
-import Header from '../Utils/Header';
-import Divider from '../Utils/Divider';
-import ExperienciaAutentica from '../../Assets/experiencia_autentica.svg?react';
-import ExperienciaAutenticaMobile from '../../Assets/experiencia_autentica_mobile.svg?react';
-import TextContent from '../Utils/TextContent';
-import Title from '../Utils/Title';
-import Label from '../Utils/Label';
-import Footer from '../Utils/Footer';
-import WhatsAppIcon from '../../Assets/whatsapp_icon.svg?react';
-import InstagramIcon from '../../Assets/instagram_icon.svg?react';
-import TwitterIcon from '../../Assets/twitter_icon.svg?react';
-import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
+import React from "react";
+import styles from "./FaleConosco.module.css";
+import Header from "../Utils/Header";
+import Divider from "../Utils/Divider";
+import ExperienciaAutentica from "../../Assets/experiencia_autentica.svg?react";
+import ExperienciaAutenticaMobile from "../../Assets/experiencia_autentica_mobile.svg?react";
+import TextContent from "../Utils/TextContent";
+import Title from "../Utils/Title";
+import Label from "../Utils/Label";
+import Footer from "../Utils/Footer";
+import WhatsAppIcon from "../../Assets/whatsapp_icon.svg?react";
+import InstagramIcon from "../../Assets/instagram_icon.svg?react";
+import TwitterIcon from "../../Assets/twitter_icon.svg?react";
+import CasaAmarela from "../../Assets/logo_casa_amarela.svg?react";
 
 const FaleConosco = () => {
   return (
-    <div className={`container`}>
+    <div
+      className={`container ${styles.faleConoscoContainer}`}
+      style={{ position: "relative" }}
+    >
       <Header
         buttonColor="yellow"
         className={styles.header}
@@ -41,28 +44,27 @@ const FaleConosco = () => {
           <div className={styles.labelGroup}>
             <div>
               <a href="http://Wa.me/5586999866447">
-              <Label
-                label="WhatsApp"
-                type="yellowWhite"
-                icon={WhatsAppIcon}
-                size="small"
-                border="square"
-                clickable="clickable"
-              />
+                <Label
+                  label="WhatsApp"
+                  type="yellowWhite"
+                  icon={WhatsAppIcon}
+                  size="small"
+                  border="square"
+                  clickable="clickable"
+                />
               </a>
             </div>
             <div>
               <a href="https://www.instagram.com/casaamarelapiaui?igsh=ZWN3eWRtd3hlaGdh">
-              <Label
-                label="Instagram"
-                type="yellowWhite"
-                icon={InstagramIcon}
-                size="small"
-                border="square"
-                clickable="clickable"
-              />
+                <Label
+                  label="Instagram"
+                  type="yellowWhite"
+                  icon={InstagramIcon}
+                  size="small"
+                  border="square"
+                  clickable="clickable"
+                />
               </a>
-              
             </div>
           </div>
           <div className={styles.desktop}>
