@@ -81,7 +81,7 @@ const Home = () => {
         leftCurtain.style.transform = "translateX(0)";
         rightCurtain.style.transform = "translateX(0)";
         content.classList.remove(styles.visible);
-      }, 5000);
+      }, 20000);
     }
   };
 
@@ -421,7 +421,7 @@ const Home = () => {
                   </div>
                   <TextContent
                     type="blackBrown"
-                    content="A Yellow Filme é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Filme oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções."
+                    content="A Yellow Film é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Film oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções."
                     maxCharacters="maxCharacters30"
                   />
                   <Hyperlink
@@ -652,7 +652,7 @@ const Home = () => {
                   </div>
                   <TextContent
                     type="blackBrown"
-                    content="A Yellow Filme é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Filme oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções."
+                    content="A Yellow Film é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Film oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções."
                     maxCharacters="maxCharacters30"
                   />
                   <Hyperlink

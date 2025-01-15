@@ -67,7 +67,7 @@ const YellowFilme = () => {
           </div>
 
           <TextContent
-            content="A Yellow Filme é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Filme oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções"
+            content="A Yellow Film é uma produtora audiovisual dedicada a promover a Casa Amarela e todas as atividades do hub cultural Piawood. Além disso, a Yellow Film oferece serviços especializados de audiovisual para marcas e empresas que desejam produções realizadas em coproduções"
             color="brown"
             type="medium"
             maxCharacters="maxCharacters40"
@@ -88,7 +88,7 @@ const YellowFilme = () => {
           <div>
             Pra dentro
             <div>
-              A Yellow Filme cria todo o conteúdo audiovisual para promoção,
+              A Yellow Film cria todo o conteúdo audiovisual para promoção,
               comunicação, edição e direção dos conteúdos para o hub cultural
               Piawood.
             </div>
@@ -101,7 +101,7 @@ const YellowFilme = () => {
           <div>
             Pra fora
             <div>
-              Yellow filme também oferece seus serviços e expertise local e
+              Yellow Film também oferece seus serviços e expertise local e
               regional para marcas e empresas que desejam realizar coproduções
               audiovisuais dentro e fora do Piauí.
             </div>
