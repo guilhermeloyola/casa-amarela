@@ -430,7 +430,7 @@ const Home = () => {
                   <Hyperlink
                     color="orange"
                     label="Saiba mais sobre a Yellow Film"
-                    href="/YellowFilm"
+                    href="/YellowFilme"
                     arrowColor="arrowOrange"
                   />
                 </div>
@@ -661,7 +661,7 @@ const Home = () => {
                   <Hyperlink
                     color="orange"
                     label="Saiba mais sobre a Yellow Film"
-                    href="/YellowFilm"
+                    href="/YellowFilme"
                     arrowColor="arrowOrange"
                   />
                 </div>
