@@ -387,7 +387,10 @@ const Home = () => {
               <Title label="Live and" type="green" />
               <Title label="experience" type="green" />
               <div>
-                <Button label="Ver eventos" type="green" />
+                <a href="/Hospitality">
+                  <Button label="Ver eventos" type="green" />
+                </a>
+                
               </div>
             </div>
             <div className={styles.eventsImg}>
