@@ -257,7 +257,7 @@ const Home = () => {
           style={{ ...alignCenter, justifyContent: "center", width: "100%" }}
         >
           <div className={styles.housesMap}>
-            <img
+            {/* <img
               className={`${styles.housesMap} ${styles.desktop}`}
               src="src/Assets/hospitality_map.png"
               alt="Mapa de estadias"
@@ -266,7 +266,7 @@ const Home = () => {
               className={styles.mobile}
               src="src/Assets/houses_mobile.jpeg"
               alt="Mapa de estadias"
-            />
+            /> */}
             <div className={styles.casaRio}>
               <SpeechBalloon
                 label="Casa Rio"
