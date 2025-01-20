@@ -568,7 +568,7 @@ const Home = () => {
           }}
         >
           <div className={styles.housesMap}>
-            <img src="src/Assets/houses_mobile.jpeg" alt="Mapa de estadias" />
+            {/* <img src="src/Assets/houses_mobile.jpeg" alt="Mapa de estadias" /> */}
           </div>
           <div className={styles.housesCard}>
             <ImageGallery items={videos} showIndex showPlayButton />
