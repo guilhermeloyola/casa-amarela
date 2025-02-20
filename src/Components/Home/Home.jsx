@@ -301,31 +301,25 @@ const Home = () => {
             </div>
             <div className={styles.casaBaete}>
               <SpeechBalloon
-                label="Casa Baeté"
-                state={hovered === "Casa Baeté" ? "selected" : "unselected"}
-                onClick={() => openModalWithVideo("4oRnVKAd8RU", "Casa Baeté")}
-                onMouseEnter={() => handleMouseEnter("Casa Baeté")}
-              />
-            </div>
-            <div className={styles.casaDecker}>
-              <SpeechBalloon
-                label="Casa Decker"
-                state={hovered === "Casa Decker" ? "selected" : "unselected"}
-                onMouseEnter={() => handleMouseEnter("Casa Decker")}
+                label="Vila Abaeté"
+                state={hovered === "Vila Abaeté" ? "selected" : "unselected"}
+                onClick={() => openModalWithVideo("4oRnVKAd8RU", "Vila Abaeté")}
+                onMouseEnter={() => handleMouseEnter("Vila Abaeté")}
               />
             </div>
             <div className={styles.casaDharma}>
               <SpeechBalloon
                 label="Casa Dharma"
                 state={hovered === "Casa Dharma" ? "selected" : "unselected"}
+                onClick={() => openModalWithVideo("4oRnVKAd8RU", "Vila Abaeté")}
                 onMouseEnter={() => handleMouseEnter("Casa Dharma")}
               />
             </div>
             <div className={styles.casaBruxa}>
               <SpeechBalloon
-                label="Casa da Bruxa"
-                state={hovered === "Casa da Bruxa" ? "selected" : "unselected"}
-                onMouseEnter={() => handleMouseEnter("Casa da Bruxa")}
+                label="Casa Boca da Bruxa"
+                state={hovered === "Casa Boca da Bruxa" ? "selected" : "unselected"}
+                onMouseEnter={() => handleMouseEnter("Casa Boca da Bruxa")}
               />
             </div>
             <div className={styles.cardReserva}>
